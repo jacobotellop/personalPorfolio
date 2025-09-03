@@ -1,52 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Research Scientist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background-color: #e9ecef;
+            padding: 15px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background-color: #6c757d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header-text h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a365d;
+        }
+
+        .header-text p {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #1a365d;
+        }
+
+        .nav-btn.active {
+            background-color: #1a365d;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .profile-image {
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1a365d;
+        }
+
+        .profile-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .profile-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 40px;
+        }
+
+        .about-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #e9ecef;
+            padding: 40px 0;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 8px;
+        }
+
+        .contact-info p {
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        .social-link {
+            color: #1a365d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            text-align: right;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .profile-photo {
+                width: 250px;
+                height: 250px;
+            }
+
+            .profile-title {
+                font-size: 36px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <img src="default-profile.jpg" alt="Profile picture" class="profile-pic">
-      <h1>Your Name</h1>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">YN</div>
+                    <div class="header-text">
+                        <h1>Your Name</h1>
+                        <p>Research Scientist @ Your Institution</p>
+                    </div>
+                </div>
+                <nav class="nav-buttons">
+                    <a href="#" class="nav-btn">Resume</a>
+                    <a href="#" class="nav-btn active">Research</a>
+                    <a href="#" class="nav-btn">Outreach</a>
+                    <a href="#" class="nav-btn">Personal</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Short intro: your academic focus, research interests, and what you enjoy building.</p>
-  </section>
+    <main class="main-content">
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Profile Photo" class="profile-photo">
+                </div>
+                <div class="profile-content">
+                    <h1 class="profile-title">Your Name</h1>
+                    <div class="about-section">
+                        <h2>A Bit About Me</h2>
+                        <p class="about-text">
+                            I am a research scientist working at [Your Institution]. Prior to that, I was a fellow at [Previous Institution].
+                        </p>
+                        <p class="about-text">
+                            I am interested in [Your Research Area], [Specific Interest], and their impact on [Field of Study]. In my research, I combine dedicated multi-wavelength observations with analysis of large datasets, and am particularly interested in applications of machine learning and data science tools to extract novel information from [Your Data Type].
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-  <section id="projects">
-    <h2>Projects & Research</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Project Title</h3>
-        <p>One-line description of project.</p>
-        <a href="#">Project Link</a>
-      </div>
-      <!-- Add more projects as needed -->
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:you@example.com">you@example.com</a><br>
-      <a href="https://github.com/yourusername">GitHub</a> |
-      <a href="resume.pdf">Resume (PDF)</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Your Name.</p>
-  </footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p>yourname [at] institution.edu</p>
+                </div>
+                <div class="contact-info">
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/yourusername" class="social-link">https://github.com/yourusername</a></p>
+                </div>
+                <div class="footer-right">
+                    <p>© 2023 By Your Name</p>
+                    <p>Proudly created with HTML & CSS</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
