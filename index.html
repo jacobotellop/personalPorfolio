@@ -81,6 +81,7 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
             cursor: pointer;
+            border: none;
         }
 
         .nav-btn:hover {
@@ -94,6 +95,7 @@
         /* Main Content */
         .main-content {
             padding: 60px 0;
+            min-height: 500px;
         }
 
         .content-section {
@@ -104,15 +106,12 @@
             display: block;
         }
 
+        /* About Me Section */
         .profile-section {
             display: flex;
             align-items: flex-start;
             gap: 60px;
             margin-bottom: 60px;
-        }
-
-        .profile-section.active {
-            display: flex;
         }
 
         .profile-image {
@@ -152,22 +151,33 @@
             margin-bottom: 20px;
         }
 
-        /* Projects Section */
-        .projects-section {
-            text-align: center;
-        }
-
+        /* Section Titles */
         .section-title {
             font-size: 48px;
             font-weight: 700;
             color: #1a365d;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
+        .section-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-content p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Projects Overview */
         .projects-intro {
             font-size: 18px;
             color: #555;
             margin-bottom: 40px;
+            text-align: center;
         }
 
         .projects-grid {
@@ -186,6 +196,7 @@
             border: 2px solid #e9ecef;
             transition: all 0.3s ease;
             text-align: center;
+            cursor: pointer;
         }
 
         .project-card:hover {
@@ -200,21 +211,94 @@
             margin: 0;
         }
 
-        /* Other Sections */
-        .research-section, .contact-section {
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .section-content {
-            max-width: 800px;
+        /* Individual Project Pages */
+        .project-detail {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .section-content p {
-            font-size: 18px;
-            color: #555;
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
             margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .back-btn:hover {
+            background-color: #1a365d;
+        }
+
+        .project-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            margin-bottom: 30px;
+        }
+
+        .project-content ul {
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .project-content li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project-image {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-image-caption {
+            padding: 10px 15px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+            color: #6c757d;
+            text-align: center;
+        }
+
+        .pdf-link {
+            color: #1a365d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -292,10 +376,18 @@
                 gap: 15px;
             }
 
+            .project-images {
+                grid-template-columns: 1fr;
+            }
+
             .footer-content {
                 flex-direction: column;
                 gap: 20px;
                 text-align: center;
+            }
+
+            .project-content {
+                padding: 20px;
             }
         }
     </style>
@@ -324,64 +416,316 @@
     <main class="main-content">
         <div class="container">
             <!-- About Me Section -->
-            <div id="about" class="content-section profile-section active">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Profile Photo" class="profile-photo">
-                </div>
-                <div class="profile-content">
-                    <h1 class="profile-title">Your Name</h1>
-                    <div class="about-section">
-                        <h2>A Bit About Me</h2>
-                        <p class="about-text">
-                            I am a research scientist working at [Your Institution]. Prior to that, I was a fellow at [Previous Institution].
-                        </p>
-                        <p class="about-text">
-                            I am interested in [Your Research Area], [Specific Interest], and their impact on [Field of Study]. In my research, I combine dedicated multi-wavelength observations with analysis of large datasets, and am particularly interested in applications of machine learning and data science tools to extract novel information from [Your Data Type].
-                        </p>
+            <div id="about" class="content-section active">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Profile Photo" class="profile-photo">
+                    </div>
+                    <div class="profile-content">
+                        <h1 class="profile-title">Your Name</h1>
+                        <div class="about-section">
+                            <h2>A Bit About Me</h2>
+                            <p class="about-text">
+                                I am a research scientist working at [Your Institution]. Prior to that, I was a fellow at [Previous Institution].
+                            </p>
+                            <p class="about-text">
+                                I am interested in [Your Research Area], [Specific Interest], and their impact on [Field of Study]. In my research, I combine dedicated multi-wavelength observations with analysis of large datasets, and am particularly interested in applications of machine learning and data science tools to extract novel information from [Your Data Type].
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Research Section -->
-            <div id="research" class="content-section research-section">
+            <div id="research" class="content-section">
                 <h1 class="section-title">Research</h1>
                 <div class="section-content">
-                    <p>Details about your research work, publications, and ongoing projects will go here.</p>
+                    <div class="project-detail">
+                        <div class="project-content">
+                            <h2 style="color: #1a365d; margin-bottom: 20px;">Tactile Sensing Research</h2>
+                            <ul>
+                                <li>Research focuses on tactile sensing, specifically on increasing the speed of non-parallelized sensing grids by implementing a new algorithm called Probability-based Adaptive Sampling (PAS)</li>
+                                <li>The principle behind PAS is to smartly sample fewer pixels per frame and rather sample pixels near regions of high pressure</li>
+                                <li>The algorithm maps each pixel in the grid to a probability, and increases that probability if that pixel is near a region of recurrent high pressure</li>
+                                <li>Unsampled pixels are then reconstructed using a sampling dictionary to produce the final tactile image</li>
+                            </ul>
+                            <div class="project-images">
+                                <div class="project-image">
+                                    <img src="PASlong.png" alt="PAS Algorithm Visualization">
+                                    <div class="project-image-caption">PAS Algorithm Implementation</div>
+                                </div>
+                            </div>
+                            <p style="margin-top: 20px; text-align: center;">
+                                <a href="ArikPaper.pdf" class="pdf-link">📄 Read Full Research Paper</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Contact Me Section -->
-            <div id="contact" class="content-section contact-section">
+            <div id="contact" class="content-section">
                 <h1 class="section-title">Contact Me</h1>
                 <div class="section-content">
-                    <p>Contact information and ways to reach you will go here.</p>
+                    <p>Feel free to reach out for collaborations, research opportunities, or any questions!</p>
+                    <div style="text-align: center; margin-top: 40px;">
+                        <p style="font-size: 18px; margin-bottom: 15px;"><strong>Email:</strong> yourname@institution.edu</p>
+                        <p style="font-size: 18px; margin-bottom: 15px;"><strong>LinkedIn:</strong> <a href="#" class="social-link">linkedin.com/in/yourprofile</a></p>
+                        <p style="font-size: 18px;"><strong>GitHub:</strong> <a href="https://github.com/yourusername" class="social-link">github.com/yourusername</a></p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Projects Section -->
-            <div id="projects" class="content-section projects-section">
+            <!-- Projects Overview -->
+            <div id="projects" class="content-section">
                 <h1 class="section-title">Projects</h1>
                 <p class="projects-intro">Check out my different projects, all from clubs to coursework to DIY ideas!</p>
                 
                 <div class="projects-grid">
-                    <a href="#cmos" class="project-card">
+                    <div class="project-card" onclick="showProject('cmos')">
                         <h3>CMOS Imager</h3>
-                    </a>
-                    <a href="#sonar" class="project-card">
+                    </div>
+                    <div class="project-card" onclick="showProject('sonar')">
                         <h3>Sonar Ranging PCB</h3>
-                    </a>
-                    <a href="#hbridge" class="project-card">
+                    </div>
+                    <div class="project-card" onclick="showProject('hbridge')">
                         <h3>H-Bridge Driver</h3>
-                    </a>
-                    <a href="#dtmf" class="project-card">
+                    </div>
+                    <div class="project-card" onclick="showProject('dtmf')">
                         <h3>DTMF Encoding & Decoding</h3>
-                    </a>
-                    <a href="#cpp" class="project-card">
+                    </div>
+                    <div class="project-card" onclick="showProject('cpp')">
                         <h3>C/C++ Projects</h3>
-                    </a>
-                    <a href="#ecg" class="project-card">
+                    </div>
+                    <div class="project-card" onclick="showProject('ecg')">
                         <h3>ECG Circuit</h3>
-                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Individual Project Pages -->
+            <!-- CMOS Imager -->
+            <div id="cmos" class="content-section">
+                <div class="project-detail">
+                    <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
+                    <div class="project-header">
+                        <h1>CMOS Imager</h1>
+                    </div>
+                    <div class="project-content">
+                        <ul>
+                            <li>Used Cadence Virtuoso to design and simulate a 24 x 24 pixel sensor array through modular design from individual transistors</li>
+                            <li>Designed and simulated a complete 3 Transistor Active Pixel Sensor (3T APS) enabling pixel reset and column read out with optimized timing design</li>
+                            <li>Created CMOS-based D-latch circuits as building blocks for the shift register architecture</li>
+                            <li>Developed a 4-bit shift register by cascading four D latches sequentially, verified through simulation showing proper pulse propagation</li>
+                            <li>Implemented a complete 24 x 24 pixel array controlled by three sets of 4 column shift registers for linear raster scan functionality</li>
+                            <li>Successfully achieved row reset signal control, current driving for entire rows, and column selection for individual pixel access</li>
+                        </ul>
+                        <div class="project-images">
+                            <div class="project-image">
+                                <img src="3T APS Full Circuit Schematic.png" alt="3T APS Schematic">
+                                <div class="project-image-caption">3T Active Pixel Sensor Circuit Schematic</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="3T APS Layout.png" alt="3T APS Layout">
+                                <div class="project-image-caption">3T APS Complete Layout Implementation</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="C2MOS DLatch Circuit.png" alt="D-Latch Circuit">
+                                <div class="project-image-caption">CMOS D-Latch Schematic and Layout</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="Final Deadass.png" alt="Final Array Layout">
+                                <div class="project-image-caption">24x24 Pixel Array Full Layout</div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px; text-align: center;">
+                            <a href="Design Day Poster (1).pdf" class="pdf-link">📄 View Design Day Poster</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sonar Ranging PCB -->
+            <div id="sonar" class="content-section">
+                <div class="project-detail">
+                    <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
+                    <div class="project-header">
+                        <h1>Ultrasonic Sonar Ranging System</h1>
+                    </div>
+                    <div class="project-content">
+                        <ul>
+                            <li>Developed a precision sonar ranging system for accurate distance measurement using time-of-flight principles</li>
+                            <li>Implemented 40 kHz ping signal transmission via TX/RX transducer architecture for optimal acoustic performance</li>
+                            <li>Designed clean signal generation using dedicated waveform IC producing high-resolution 40 kHz sine waves</li>
+                            <li>Created AC-coupled amplification stage with non-inverting op-amp configuration for transducer driving</li>
+                            <li>Engineered wide dynamic range receiving system with PID-based feedback control for detecting distant objects</li>
+                            <li>Implemented variable gain amplifier IC with dynamic gain adjustment to compensate for exponential sound pressure decay</li>
+                            <li>Integrated 12-bit ADC for signal digitization and I2C communication with ESP32 microcontroller</li>
+                        </ul>
+                        <div class="project-images">
+                            <div class="project-image">
+                                <img src="sonarSchematic[21].png" alt="Sonar Schematic">
+                                <div class="project-image-caption">Complete Sonar System Schematic</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="sonarLayout.png" alt="Sonar PCB Layout">
+                                <div class="project-image-caption">PCB Layout Design</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="sonar3d.png" alt="3D PCB View">
+                                <div class="project-image-caption">3D PCB Visualization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- H-Bridge Driver -->
+            <div id="hbridge" class="content-section">
+                <div class="project-detail">
+                    <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
+                    <div class="project-header">
+                        <h1>H-Bridge Driver PCB</h1>
+                    </div>
+                    <div class="project-content">
+                        <ul>
+                            <li>Designed high-performance H-bridge driver IC with 20 kHz switching frequency capability</li>
+                            <li>Engineered to handle 5A current loads at 12V for robust motor control applications</li>
+                            <li>Optimized for fast 2-wheel to 4-wheel drive switching in automotive applications</li>
+                            <li>Selected DRV8873 specialized automotive driver IC for its compact form factor and flexible operation modes</li>
+                            <li>Achieved performance specifications that comfortably exceed design requirements</li>
+                            <li>Implemented comprehensive thermal management and protection features</li>
+                        </ul>
+                        <div class="project-images">
+                            <div class="project-image">
+                                <img src="hBridgeschem.png" alt="H-Bridge Schematic">
+                                <div class="project-image-caption">H-Bridge Driver Schematic</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="hBridgeLayout.png" alt="H-Bridge Layout">
+                                <div class="project-image-caption">PCB Layout Design</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="hBridgepic.HEIC" alt="Physical PCB">
+                                <div class="project-image-caption">Fabricated PCB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DTMF System -->
+            <div id="dtmf" class="content-section">
+                <div class="project-detail">
+                    <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
+                    <div class="project-header">
+                        <h1>DTMF Signal Processing System</h1>
+                    </div>
+                    <div class="project-content">
+                        <ul>
+                            <li>Developed comprehensive MATLAB scripts for encoding numeric passcodes into Dual Tone Multi Frequency (DTMF) signal waveforms</li>
+                            <li>Implemented frequency mapping system where each digit corresponds to specific pairs of frequencies according to DTMF standards</li>
+                            <li>Created robust DTMF decoder capable of processing noisy input signals through advanced signal processing techniques</li>
+                            <li>Utilized filtering, energy shifting, and Fourier analysis for accurate frequency extraction from incoming signals</li>
+                            <li>Engineered digit string processing capability for handling continuous multi-digit sequences</li>
+                            <li>Implemented automatic signal splitting algorithm to isolate individual digits from continuous streams</li>
+                        </ul>
+                        <div class="project-images">
+                            <div class="project-image">
+                                <img src="dtmf.png" alt="DTMF Frequency Chart">
+                                <div class="project-image-caption">DTMF Frequency Mapping Chart</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="dtmfFlowchart.png" alt="DTMF Processing Flowchart">
+                                <div class="project-image-caption">Signal Processing Flowchart</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C++ Projects -->
+            <div id="cpp" class="content-section">
+                <div class="project-detail">
+                    <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
+                    <div class="project-header">
+                        <h1>C/C++ Projects</h1>
+                    </div>
+                    <div class="project-content">
+                        <h3 style="color: #1a365d; margin-bottom: 15px;">Pseudo Photoshop © - Image Manipulation Suite</h3>
+                        <ul style="margin-bottom: 30px;">
+                            <li>Programmed comprehensive image manipulation software with advanced processing capabilities</li>
+                            <li>Implemented image blurring algorithms using convolution kernels for various blur effects</li>
+                            <li>Developed precise cropping functionality with user-defined region selection</li>
+                            <li>Created grayscaling conversion using weighted RGB channel processing</li>
+                            <li>Engineered color inversion and binary image conversion features</li>
+                            <li>Optimized processing algorithms for handling various image formats and sizes</li>
+                        </ul>
+
+                        <h3 style="color: #1a365d; margin-bottom: 15px;">Chess Game Engine</h3>
+                        <ul>
+                            <li>Developed complete chess game implementation in C++ with full rule compliance</li>
+                            <li>Programmed comprehensive move validation system for all piece types</li>
+                            <li>Implemented advanced game state detection including checkmate and stalemate conditions</li>
+                            <li>Created terminal-based user interface for local gameplay</li>
+                            <li>Engineered efficient board representation and game state management</li>
+                            <li>Designed modular architecture for easy feature expansion and maintenance</li>
+                        </ul>
+
+                        <div class="project-images">
+                            <div class="project-image">
+                                <img src="kitten.png" alt="Original Image">
+                                <div class="project-image-caption">Original Image</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="kitten-point.png" alt="Point Processed">
+                                <div class="project-image-caption">Point Processing Effect</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="kitten_binary.png" alt="Binary Conversion">
+                                <div class="project-image-caption">Binary Image Conversion</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="kitten-invert.png" alt="Color Inverted">
+                                <div class="project-image-caption">Color Inversion Effect</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="chess.png" alt="Chess Game">
+                                <div class="project-image-caption">Terminal Chess Game Interface</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ECG Circuit -->
+            <div id="ecg" class="content-section">
+                <div class="project-detail">
+                    <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
+                    <div class="project-header">
+                        <h1>ECG Circuit Design</h1>
+                    </div>
+                    <div class="project-content">
+                        <ul>
+                            <li>Built functional electrocardiogram circuit capable of capturing and filtering ECG signals from wrist electrodes</li>
+                            <li>Developed real-time ECG signal visualization system with live plotting capabilities</li>
+                            <li>Designed 4-stage signal processing system optimized for biomedical signal acquisition</li>
+                            <li>Implemented band-pass filter stage for initial signal conditioning and noise reduction</li>
+                            <li>Engineered instrumentation amplifier stage for high-gain, low-noise signal amplification</li>
+                            <li>Integrated notch filter to eliminate 60Hz power line interference</li>
+                            <li>Added final amplification stage to achieve optimal signal levels for display and analysis</li>
+                        </ul>
+                        <div class="project-images">
+                            <div class="project-image">
+                                <img src="ECGschematic.png" alt="ECG Schematic">
+                                <div class="project-image-caption">Complete ECG Circuit Schematic in LTSpice</div>
+                            </div>
+                            <div class="project-image">
+                                <img src="bodeplotECG.png" alt="ECG Bode Plot">
+                                <div class="project-image-caption">Frequency Response Analysis</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -417,8 +761,33 @@
             // Show selected section
             document.getElementById(sectionId).classList.add('active');
             
-            // Add active class to clicked button
-            event.target.classList.add('active');
+            // Add active class to corresponding nav button
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const buttonMap = {
+                'about': 0,
+                'research': 1,
+                'contact': 2,
+                'projects': 3
+            };
+            
+            if (buttonMap.hasOwnProperty(sectionId)) {
+                navButtons[buttonMap[sectionId]].classList.add('active');
+            }
+        }
+
+        function showProject(projectId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected project
+            document.getElementById(projectId).classList.add('active');
         }
     </script>
 </body>
