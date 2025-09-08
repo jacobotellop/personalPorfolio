@@ -386,11 +386,24 @@
         /* Embedded PDF Viewer */
         .embedded-pdf {
             width: 100%;
-            height: 1200px;
+            height: 850px;
             border: 3px solid #e9ecef;
             border-radius: 12px;
             margin: 40px 0;
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Research PDF specific sizing */
+        .research-pdf {
+            width: 90%;
+            height: 750px;
+            margin: 20px auto;
+        }
+
+        /* Zoom out large layout image */
+        .large-layout-image {
+            max-width: 85%;
+            height: auto;
         }
 
         /* Wide Image Full Width Style */
@@ -674,13 +687,12 @@
                                 </div>
                                 <div class="project-image-main">
                                     <div style="text-align: center;">
-                                        <button onclick="openPDF('ArikPaper.pdf', 'Research Paper')" class="pdf-button">📄 Read Full Research Paper</button>
-                                        
                                         <!-- Embedded PDF Viewer -->
-                                        <div style="margin-top: 30px;">
+                                        <div style="margin-bottom: 30px;">
                                             <h4 style="color: #1a365d; margin-bottom: 15px; font-size: 22px;">Research Paper Preview</h4>
-                                            <iframe src="ArikPaper.pdf" class="embedded-pdf" title="Research Paper"></iframe>
+                                            <iframe src="ArikPaper.pdf" class="embedded-pdf research-pdf" title="Research Paper"></iframe>
                                         </div>
+                                        <button onclick="openPDF('ArikPaper.pdf', 'Research Paper')" class="pdf-button">📄 Read Full Research Paper</button>
                                     </div>
                                 </div>
                             </div>
@@ -774,8 +786,19 @@
                         
                         <!-- Final Deadass.png is 1.97 ratio - wide, display full width -->
                         <div class="wide-image-section" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
-                            <img src="Final Deadass.png" alt="Final Array Layout">
+                            <img src="Final Deadass.png" alt="Final Array Layout" class="large-layout-image">
                             <div class="wide-image-caption">24x24 Pixel Array Full Layout</div>
+                        </div>
+                        
+                        <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
+                            <div class="project-text">
+                                <ul style="margin-bottom: 0;">
+                                    <li style="margin-bottom: 30px;">The complete imaging system demonstrates successful integration of analog pixel sensors with digital control circuitry. Simulation results validate the design functionality including proper timing sequences, signal integrity, and array addressing capabilities for the 4x4 prototype implementation.</li>
+                                </ul>
+                            </div>
+                            <div class="project-image-main">
+                                <img src="CMOS4x4.png" alt="4x4 Grid Simulation">
+                            </div>
                         </div>
                         
                         <div style="text-align: center; margin-top: 30px;">
@@ -804,12 +827,22 @@
                                 <ul>
                                     <li>Developed a precision sonar ranging system for accurate distance measurement using time-of-flight principles. Implemented 40 kHz ping signal transmission via TX/RX transducer architecture for optimal acoustic performance with minimal interference.</li>
                                     <li>Designed clean signal generation using dedicated waveform IC producing high-resolution 40 kHz sine waves. Created AC-coupled amplification stage with non-inverting op-amp configuration for transducer driving with optimal power delivery.</li>
-                                    <li>Engineered wide dynamic range receiving system with PID-based feedback control for detecting distant objects. Implemented variable gain amplifier IC with dynamic gain adjustment to compensate for exponential sound pressure decay over distance.</li>
-                                    <li>Integrated 12-bit ADC for signal digitization and I2C communication with ESP32 microcontroller. The complete system provides real-time distance measurements with sub-centimeter accuracy across a wide operational range.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
                                 <img src="sonarLayout.PNG" alt="Sonar PCB Layout">
+                            </div>
+                        </div>
+                        
+                        <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
+                            <div class="project-image-main">
+                                <img src="sonarSketch.jpg" alt="Sonar System Design Sketch">
+                            </div>
+                            <div class="project-text">
+                                <ul>
+                                    <li>Engineered wide dynamic range receiving system with PID-based feedback control for detecting distant objects. Implemented variable gain amplifier IC with dynamic gain adjustment to compensate for exponential sound pressure decay over distance.</li>
+                                    <li>Integrated 12-bit ADC for signal digitization and I2C communication with ESP32 microcontroller. The complete system provides real-time distance measurements with sub-centimeter accuracy across a wide operational range.</li>
+                                </ul>
                             </div>
                         </div>
                         
@@ -847,7 +880,7 @@
                                 </ul>
                             </div>
                             <div class="project-image-main">
-                                <img src="hBridgepic.HEIC" alt="Physical PCB">
+                                <img src="hBridgeReal.png" alt="Physical PCB">
                             </div>
                         </div>
                         
