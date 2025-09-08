@@ -174,106 +174,107 @@
             text-align: center;
         }
 
-        /* PROJECT NAVIGATION BUTTONS - VERY PROMINENT */
+        /* PROJECT NAVIGATION - Clean & Simple */
         .project-nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 2px;
             margin-bottom: 60px;
-            flex-wrap: wrap;
-            background: linear-gradient(135deg, #1a365d, #2c5aa0);
-            padding: 30px;
-            border-radius: 25px;
-            box-shadow: 0 15px 40px rgba(26, 54, 93, 0.4);
+            background: white;
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
         }
 
         .project-nav-btn {
-            padding: 15px 25px;
-            background: white;
+            padding: 12px 20px;
+            background: #f8f9fa;
             color: #1a365d;
             border: none;
-            border-radius: 25px;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+            border-right: 1px solid #dee2e6;
+            flex: 1;
+            text-align: center;
+        }
+
+        .project-nav-btn:last-child {
+            border-right: none;
         }
 
         .project-nav-btn:hover {
-            background: #f8f9fa;
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.5);
+            background: #e9ecef;
+            color: #1a365d;
         }
 
-        /* PROJECTS HERO SECTION - VERY DRAMATIC */
+        .project-nav-btn.active {
+            background: #1a365d;
+            color: white;
+        }
+
+        /* PROJECTS OVERVIEW - Simple Design */
         .projects-hero {
-            position: relative;
-            background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 50%, #6c757d 100%);
-            border-radius: 30px;
-            padding: 100px 50px;
+            background: white;
+            border-radius: 15px;
+            padding: 60px 40px;
             margin-bottom: 60px;
-            overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
+            color: #333;
         }
 
         .hero-title {
-            font-size: 64px;
+            font-size: 48px;
             font-weight: 700;
-            color: white;
-            margin-bottom: 25px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            color: #1a365d;
+            margin-bottom: 20px;
         }
 
         .hero-subtitle {
-            font-size: 24px;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 60px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 20px;
+            color: #6c757d;
+            margin-bottom: 50px;
         }
 
-        /* IMAGE COLLAGE - MUCH LARGER */
+        /* IMAGE COLLAGE - Clean Design */
         .image-collage {
             display: grid;
             grid-template-columns: 2fr 1fr 1.5fr;
-            grid-template-rows: 300px 220px;
-            gap: 25px;
-            max-width: 1000px;
+            grid-template-rows: 250px 180px;
+            gap: 20px;
+            max-width: 900px;
             margin: 0 auto;
-            position: relative;
         }
 
         .collage-item {
-            border-radius: 25px;
+            border-radius: 12px;
             overflow: hidden;
             position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-            transition: transform 0.4s ease;
-            border: 4px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            border: 2px solid #e9ecef;
             cursor: pointer;
         }
 
         .collage-item:hover {
-            transform: scale(1.08) rotate(2deg);
+            transform: scale(1.05);
+            border-color: #1a365d;
         }
 
         .collage-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: filter 0.3s ease;
-        }
-
-        .collage-item:hover img {
-            filter: brightness(1.2) contrast(1.1);
         }
 
         .collage-large {
@@ -296,48 +297,14 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            background: linear-gradient(transparent, rgba(26, 54, 93, 0.9));
             color: white;
-            padding: 25px;
-            font-size: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        /* REMAINING PROJECTS GRID */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .project-card {
-            background-color: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-decoration: none;
-            color: #1a365d;
-            border: 3px solid #e9ecef;
-            transition: all 0.3s ease;
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .project-card:hover {
-            border-color: #1a365d;
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(26, 54, 93, 0.2);
-        }
-
-        .project-card h3 {
-            font-size: 24px;
+            padding: 20px;
+            font-size: 16px;
             font-weight: 600;
-            margin: 0;
         }
 
-        /* Individual Project Pages */
+        /* Individual Project Pages - Two Column Layout */
         .project-detail {
             max-width: 1200px;
             margin: 0 auto;
@@ -373,36 +340,78 @@
 
         .project-content {
             background-color: white;
-            padding: 60px;
             border-radius: 15px;
             border: 1px solid #e9ecef;
             margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
 
-        .project-content ul {
-            margin-left: 30px;
-            margin-bottom: 40px;
+        .project-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
         }
 
-        .project-content li {
-            margin-bottom: 20px;
-            font-size: 20px;
+        .project-text {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .project-text ul {
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .project-text li {
+            margin-bottom: 15px;
+            font-size: 18px;
             color: #555;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
-        .project-content h3 {
-            font-size: 28px;
+        .project-text h3 {
+            font-size: 26px;
             color: #1a365d;
             margin-bottom: 20px;
         }
 
+        .project-image-main {
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .project-image-main img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .additional-images {
+            grid-column: 1 / 3;
+            padding: 40px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .additional-images h4 {
+            font-size: 22px;
+            color: #1a365d;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
         .project-images {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .project-image {
@@ -436,6 +445,68 @@
 
         .pdf-link:hover {
             text-decoration: underline;
+        }
+
+        /* PDF Viewer Modal */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .pdf-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pdf-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .pdf-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: #1a365d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .pdf-close:hover {
+            background: #2c5aa0;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .pdf-title {
+            margin-bottom: 15px;
+            color: #1a365d;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
         }
 
         /* Footer */
@@ -513,12 +584,20 @@
             }
 
             .hero-title {
-                font-size: 48px;
+                font-size: 36px;
             }
 
-            .projects-grid {
+            .project-content-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+            }
+
+            .project-image-main {
+                order: -1;
+                min-height: 300px;
+            }
+
+            .additional-images {
+                grid-column: 1;
             }
 
             .project-images {
@@ -531,28 +610,33 @@
                 text-align: center;
             }
 
-            .project-content {
+            .project-text {
                 padding: 30px;
             }
 
             .project-nav {
-                gap: 10px;
-                padding: 20px;
+                flex-direction: column;
+                gap: 2px;
+                max-width: 400px;
             }
 
             .project-nav-btn {
-                font-size: 14px;
-                padding: 12px 18px;
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .project-nav-btn:last-child {
+                border-bottom: none;
             }
 
             .projects-hero {
-                padding: 60px 30px;
+                padding: 40px 20px;
             }
 
             .image-collage {
                 grid-template-columns: 1fr;
                 grid-template-rows: 250px 200px 200px;
-                max-width: 500px;
+                max-width: 400px;
             }
 
             .collage-large {
@@ -622,22 +706,23 @@
                 <div class="section-content">
                     <div class="project-detail">
                         <div class="project-content">
-                            <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 36px;">Tactile Sensing Research</h2>
-                            <ul>
-                                <li>Research focuses on tactile sensing, specifically on increasing the speed of non-parallelized sensing grids by implementing a new algorithm called Probability-based Adaptive Sampling (PAS)</li>
-                                <li>The principle behind PAS is to smartly sample fewer pixels per frame and rather sample pixels near regions of high pressure</li>
-                                <li>The algorithm maps each pixel in the grid to a probability, and increases that probability if that pixel is near a region of recurrent high pressure</li>
-                                <li>Unsampled pixels are then reconstructed using a sampling dictionary to produce the final tactile image</li>
-                            </ul>
-                            <div class="project-images">
-                                <div class="project-image">
+                            <div class="project-content-grid">
+                                <div class="project-text">
+                                    <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 36px;">Tactile Sensing Research</h2>
+                                    <ul>
+                                        <li>Research focuses on tactile sensing, specifically on increasing the speed of non-parallelized sensing grids by implementing a new algorithm called Probability-based Adaptive Sampling (PAS)</li>
+                                        <li>The principle behind PAS is to smartly sample fewer pixels per frame and rather sample pixels near regions of high pressure</li>
+                                        <li>The algorithm maps each pixel in the grid to a probability, and increases that probability if that pixel is near a region of recurrent high pressure</li>
+                                        <li>Unsampled pixels are then reconstructed using a sampling dictionary to produce the final tactile image</li>
+                                    </ul>
+                                    <p style="margin-top: 30px; text-align: center;">
+                                        <a href="#" onclick="openPDF('ArikPaper.pdf', 'Research Paper')" class="pdf-link">📄 Read Full Research Paper</a>
+                                    </p>
+                                </div>
+                                <div class="project-image-main">
                                     <img src="PASlong.png" alt="PAS Algorithm Visualization">
-                                    <div class="project-image-caption">PAS Algorithm Implementation</div>
                                 </div>
                             </div>
-                            <p style="margin-top: 30px; text-align: center;">
-                                <a href="ArikPaper.pdf" class="pdf-link">📄 Read Full Research Paper</a>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -656,7 +741,7 @@
                 </div>
             </div>
 
-            <!-- Projects Overview - COMPLETELY NEW DESIGN -->
+            <!-- Projects Overview - Clean Design -->
             <div id="projects" class="content-section">
                 <!-- Project Navigation -->
                 <div class="project-nav">
@@ -692,20 +777,9 @@
                     </div>
                 </div>
 
-                <!-- Remaining Projects -->
+                <!-- Simple call to action -->
                 <div style="text-align: center; margin-top: 50px;">
-                    <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 36px;">Additional Projects</h2>
-                    <div class="projects-grid">
-                        <div class="project-card" onclick="showProject('dtmf')">
-                            <h3>DTMF Encoding & Decoding</h3>
-                        </div>
-                        <div class="project-card" onclick="showProject('hbridge')">
-                            <h3>H-Bridge Driver</h3>
-                        </div>
-                        <div class="project-card" onclick="showProject('ecg')">
-                            <h3>ECG Circuit</h3>
-                        </div>
-                    </div>
+                    <p style="color: #6c757d; font-size: 18px;">Click on the navigation buttons above or the images to explore individual projects</p>
                 </div>
             </div>
 
@@ -718,35 +792,37 @@
                         <h1>CMOS Imager</h1>
                     </div>
                     <div class="project-content">
-                        <ul>
-                            <li>Used Cadence Virtuoso to design and simulate a 24 x 24 pixel sensor array through modular design from individual transistors</li>
-                            <li>Designed and simulated a complete 3 Transistor Active Pixel Sensor (3T APS) enabling pixel reset and column read out with optimized timing design</li>
-                            <li>Created CMOS-based D-latch circuits as building blocks for the shift register architecture</li>
-                            <li>Developed a 4-bit shift register by cascading four D latches sequentially, verified through simulation showing proper pulse propagation</li>
-                            <li>Implemented a complete 24 x 24 pixel array controlled by three sets of 4 column shift registers for linear raster scan functionality</li>
-                            <li>Successfully achieved row reset signal control, current driving for entire rows, and column selection for individual pixel access</li>
-                        </ul>
-                        <div class="project-images">
-                            <div class="project-image">
-                                <img src="3T APS Full Circuit Schematic.PNG" alt="3T APS Schematic">
-                                <div class="project-image-caption">3T Active Pixel Sensor Circuit Schematic</div>
+                        <div class="project-content-grid">
+                            <div class="project-text">
+                                <ul>
+                                    <li>Used Cadence Virtuoso to design and simulate a 24 x 24 pixel sensor array through modular design from individual transistors</li>
+                                    <li>Designed and simulated a complete 3 Transistor Active Pixel Sensor (3T APS) enabling pixel reset and column read out with optimized timing design</li>
+                                    <li>Created CMOS-based D-latch circuits as building blocks for the shift register architecture</li>
+                                    <li>Developed a 4-bit shift register by cascading four D latches sequentially, verified through simulation showing proper pulse propagation</li>
+                                    <li>Implemented a complete 24 x 24 pixel array controlled by three sets of 4 column shift registers for linear raster scan functionality</li>
+                                    <li>Successfully achieved row reset signal control, current driving for entire rows, and column selection for individual pixel access</li>
+                                </ul>
                             </div>
-                            <div class="project-image">
+                            <div class="project-image-main">
                                 <img src="3T APS Layout.PNG" alt="3T APS Layout">
-                                <div class="project-image-caption">3T APS Complete Layout Implementation</div>
                             </div>
-                            <div class="project-image">
-                                <img src="C2MOS DLatch Circuit.PNG" alt="D-Latch Circuit">
-                                <div class="project-image-caption">CMOS D-Latch Schematic and Layout</div>
-                            </div>
-                            <div class="project-image">
-                                <img src="Final Deadass.PNG" alt="Final Array Layout">
-                                <div class="project-image-caption">24x24 Pixel Array Full Layout</div>
+                            <div class="additional-images">
+                                <h4>Additional Circuit Designs</h4>
+                                <div class="project-images">
+                                    <div class="project-image">
+                                        <img src="C2MOS DLatch Circuit.png" alt="D-Latch Circuit">
+                                        <div class="project-image-caption">CMOS D-Latch Schematic and Layout</div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="Final Deadass.png" alt="Final Array Layout">
+                                        <div class="project-image-caption">24x24 Pixel Array Full Layout</div>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 30px; text-align: center;">
+                                    <a href="#" onclick="openPDF('Design Day Poster (1).pdf', 'Design Day Poster')" class="pdf-link">📄 View Design Day Poster</a>
+                                </p>
                             </div>
                         </div>
-                        <p style="margin-top: 30px; text-align: center;">
-                            <a href="Design Day Poster (1).pdf" class="pdf-link">📄 View Design Day Poster</a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -759,27 +835,33 @@
                         <h1>Ultrasonic Sonar Ranging System</h1>
                     </div>
                     <div class="project-content">
-                        <ul>
-                            <li>Developed a precision sonar ranging system for accurate distance measurement using time-of-flight principles</li>
-                            <li>Implemented 40 kHz ping signal transmission via TX/RX transducer architecture for optimal acoustic performance</li>
-                            <li>Designed clean signal generation using dedicated waveform IC producing high-resolution 40 kHz sine waves</li>
-                            <li>Created AC-coupled amplification stage with non-inverting op-amp configuration for transducer driving</li>
-                            <li>Engineered wide dynamic range receiving system with PID-based feedback control for detecting distant objects</li>
-                            <li>Implemented variable gain amplifier IC with dynamic gain adjustment to compensate for exponential sound pressure decay</li>
-                            <li>Integrated 12-bit ADC for signal digitization and I2C communication with ESP32 microcontroller</li>
-                        </ul>
-                        <div class="project-images">
-                            <div class="project-image">
-                                <img src="sonarSchematic[21].PNG" alt="Sonar Schematic">
-                                <div class="project-image-caption">Complete Sonar System Schematic</div>
+                        <div class="project-content-grid">
+                            <div class="project-text">
+                                <ul>
+                                    <li>Developed a precision sonar ranging system for accurate distance measurement using time-of-flight principles</li>
+                                    <li>Implemented 40 kHz ping signal transmission via TX/RX transducer architecture for optimal acoustic performance</li>
+                                    <li>Designed clean signal generation using dedicated waveform IC producing high-resolution 40 kHz sine waves</li>
+                                    <li>Created AC-coupled amplification stage with non-inverting op-amp configuration for transducer driving</li>
+                                    <li>Engineered wide dynamic range receiving system with PID-based feedback control for detecting distant objects</li>
+                                    <li>Implemented variable gain amplifier IC with dynamic gain adjustment to compensate for exponential sound pressure decay</li>
+                                    <li>Integrated 12-bit ADC for signal digitization and I2C communication with ESP32 microcontroller</li>
+                                </ul>
                             </div>
-                            <div class="project-image">
+                            <div class="project-image-main">
                                 <img src="sonarLayout.PNG" alt="Sonar PCB Layout">
-                                <div class="project-image-caption">PCB Layout Design</div>
                             </div>
-                            <div class="project-image">
-                                <img src="sonar3d.PNG" alt="3D PCB View">
-                                <div class="project-image-caption">3D PCB Visualization</div>
+                            <div class="additional-images">
+                                <h4>System Design & Implementation</h4>
+                                <div class="project-images">
+                                    <div class="project-image">
+                                        <img src="sonarSchematic[21].PNG" alt="Sonar Schematic">
+                                        <div class="project-image-caption">Complete Sonar System Schematic</div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="sonar3d.PNG" alt="3D PCB View">
+                                        <div class="project-image-caption">3D PCB Visualization</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -794,26 +876,32 @@
                         <h1>H-Bridge Driver PCB</h1>
                     </div>
                     <div class="project-content">
-                        <ul>
-                            <li>Designed high-performance H-bridge driver IC with 20 kHz switching frequency capability</li>
-                            <li>Engineered to handle 5A current loads at 12V for robust motor control applications</li>
-                            <li>Optimized for fast 2-wheel to 4-wheel drive switching in automotive applications</li>
-                            <li>Selected DRV8873 specialized automotive driver IC for its compact form factor and flexible operation modes</li>
-                            <li>Achieved performance specifications that comfortably exceed design requirements</li>
-                            <li>Implemented comprehensive thermal management and protection features</li>
-                        </ul>
-                        <div class="project-images">
-                            <div class="project-image">
-                                <img src="hBridgeschem.png" alt="H-Bridge Schematic">
-                                <div class="project-image-caption">H-Bridge Driver Schematic</div>
+                        <div class="project-content-grid">
+                            <div class="project-text">
+                                <ul>
+                                    <li>Designed high-performance H-bridge driver IC with 20 kHz switching frequency capability</li>
+                                    <li>Engineered to handle 5A current loads at 12V for robust motor control applications</li>
+                                    <li>Optimized for fast 2-wheel to 4-wheel drive switching in automotive applications</li>
+                                    <li>Selected DRV8873 specialized automotive driver IC for its compact form factor and flexible operation modes</li>
+                                    <li>Achieved performance specifications that comfortably exceed design requirements</li>
+                                    <li>Implemented comprehensive thermal management and protection features</li>
+                                </ul>
                             </div>
-                            <div class="project-image">
-                                <img src="hBridgeLayout.png" alt="H-Bridge Layout">
-                                <div class="project-image-caption">PCB Layout Design</div>
-                            </div>
-                            <div class="project-image">
+                            <div class="project-image-main">
                                 <img src="hBridgepic.HEIC" alt="Physical PCB">
-                                <div class="project-image-caption">Fabricated PCB</div>
+                            </div>
+                            <div class="additional-images">
+                                <h4>Design Schematics</h4>
+                                <div class="project-images">
+                                    <div class="project-image">
+                                        <img src="hBridgeschem.png" alt="H-Bridge Schematic">
+                                        <div class="project-image-caption">H-Bridge Driver Schematic</div>
+                                    </div>
+                                    <div class="project-image">
+                                        <img src="hBridgeLayout.png" alt="H-Bridge Layout">
+                                        <div class="project-image-caption">PCB Layout Design</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
