@@ -19,15 +19,15 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
         }
 
         /* Header */
         .header {
             background-color: #e9ecef;
-            padding: 15px 0;
+            padding: 20px 0;
             border-bottom: 1px solid #dee2e6;
         }
 
@@ -40,12 +40,12 @@
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .logo {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             background-color: #6c757d;
             border-radius: 50%;
             display: flex;
@@ -53,32 +53,33 @@
             justify-content: center;
             color: white;
             font-weight: bold;
+            font-size: 18px;
         }
 
         .header-text h1 {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 600;
             color: #1a365d;
         }
 
         .header-text p {
-            font-size: 16px;
+            font-size: 18px;
             color: #6c757d;
         }
 
         .nav-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         .nav-btn {
-            padding: 12px 24px;
+            padding: 15px 30px;
             background-color: #6c757d;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 18px;
             transition: background-color 0.3s ease;
             cursor: pointer;
             border: none;
@@ -94,8 +95,8 @@
 
         /* Main Content */
         .main-content {
-            padding: 60px 0;
-            min-height: 500px;
+            padding: 80px 0;
+            min-height: 600px;
         }
 
         .content-section {
@@ -110,8 +111,8 @@
         .profile-section {
             display: flex;
             align-items: flex-start;
-            gap: 60px;
-            margin-bottom: 60px;
+            gap: 80px;
+            margin-bottom: 80px;
         }
 
         .profile-image {
@@ -119,125 +120,251 @@
         }
 
         .profile-photo {
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 350px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #1a365d;
+            border: 6px solid #1a365d;
         }
 
         .profile-content {
             flex: 1;
-            max-width: 600px;
+            max-width: 700px;
         }
 
         .profile-title {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 700;
             color: #1a365d;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .about-section h2 {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 600;
             color: #1a365d;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .about-text {
-            font-size: 16px;
+            font-size: 20px;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            line-height: 1.7;
         }
 
         /* Section Titles */
         .section-title {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 700;
             color: #1a365d;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             text-align: center;
         }
 
         .section-content {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-content p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        /* Projects Overview */
-        .projects-intro {
-            font-size: 18px;
+            font-size: 22px;
             color: #555;
             margin-bottom: 40px;
             text-align: center;
         }
 
+        /* PROJECT NAVIGATION BUTTONS - VERY PROMINENT */
+        .project-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #1a365d, #2c5aa0);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(26, 54, 93, 0.4);
+        }
+
+        .project-nav-btn {
+            padding: 15px 25px;
+            background: white;
+            color: #1a365d;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+        }
+
+        .project-nav-btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.5);
+        }
+
+        /* PROJECTS HERO SECTION - VERY DRAMATIC */
+        .projects-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 50%, #6c757d 100%);
+            border-radius: 30px;
+            padding: 100px 50px;
+            margin-bottom: 60px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* IMAGE COLLAGE - MUCH LARGER */
+        .image-collage {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            grid-template-rows: 300px 220px;
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .collage-item {
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            transition: transform 0.4s ease;
+            border: 4px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+        }
+
+        .collage-item:hover {
+            transform: scale(1.08) rotate(2deg);
+        }
+
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+
+        .collage-item:hover img {
+            filter: brightness(1.2) contrast(1.1);
+        }
+
+        .collage-large {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+
+        .collage-top-right {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .collage-bottom-right {
+            grid-column: 2 / 4;
+            grid-row: 2;
+        }
+
+        .collage-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        /* REMAINING PROJECTS GRID */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .project-card {
             background-color: white;
-            padding: 30px 20px;
-            border-radius: 12px;
+            padding: 40px 30px;
+            border-radius: 15px;
             text-decoration: none;
             color: #1a365d;
-            border: 2px solid #e9ecef;
+            border: 3px solid #e9ecef;
             transition: all 0.3s ease;
             text-align: center;
             cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .project-card:hover {
             border-color: #1a365d;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(26, 54, 93, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(26, 54, 93, 0.2);
         }
 
         .project-card h3 {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 600;
             margin: 0;
         }
 
         /* Individual Project Pages */
         .project-detail {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .project-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .project-header h1 {
-            font-size: 42px;
+            font-size: 52px;
             font-weight: 700;
             color: #1a365d;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .back-btn {
             background-color: #6c757d;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
+            padding: 15px 30px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 30px;
-            font-size: 14px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .back-btn:hover {
@@ -246,35 +373,43 @@
 
         .project-content {
             background-color: white;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 60px;
+            border-radius: 15px;
             border: 1px solid #e9ecef;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .project-content ul {
-            margin-left: 20px;
-            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-bottom: 40px;
         }
 
         .project-content li {
-            margin-bottom: 15px;
-            font-size: 16px;
+            margin-bottom: 20px;
+            font-size: 20px;
             color: #555;
-            line-height: 1.7;
+            line-height: 1.8;
+        }
+
+        .project-content h3 {
+            font-size: 28px;
+            color: #1a365d;
+            margin-bottom: 20px;
         }
 
         .project-images {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .project-image {
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            border: 1px solid #e9ecef;
+            border: 2px solid #e9ecef;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         .project-image img {
@@ -284,17 +419,19 @@
         }
 
         .project-image-caption {
-            padding: 10px 15px;
+            padding: 15px 20px;
             background-color: #f8f9fa;
-            font-size: 14px;
+            font-size: 16px;
             color: #6c757d;
             text-align: center;
+            font-weight: 600;
         }
 
         .pdf-link {
             color: #1a365d;
             text-decoration: none;
             font-weight: 600;
+            font-size: 20px;
         }
 
         .pdf-link:hover {
@@ -304,7 +441,7 @@
         /* Footer */
         .footer {
             background-color: #e9ecef;
-            padding: 25px 0;
+            padding: 30px 0;
             border-top: 1px solid #dee2e6;
         }
 
@@ -312,19 +449,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 60px;
+            gap: 80px;
         }
 
         .contact-info h3 {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 600;
             color: #1a365d;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .contact-info p {
             color: #6c757d;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .social-link {
@@ -339,6 +476,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 20px;
@@ -351,8 +492,8 @@
             }
 
             .nav-btn {
-                padding: 10px 16px;
-                font-size: 14px;
+                padding: 12px 20px;
+                font-size: 16px;
             }
 
             .profile-section {
@@ -363,17 +504,21 @@
             }
 
             .profile-photo {
-                width: 250px;
-                height: 250px;
+                width: 280px;
+                height: 280px;
             }
 
             .profile-title, .section-title {
-                font-size: 36px;
+                font-size: 42px;
+            }
+
+            .hero-title {
+                font-size: 48px;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 20px;
             }
 
             .project-images {
@@ -382,39 +527,32 @@
 
             .footer-content {
                 flex-direction: column;
-                gap: 20px;
+                gap: 30px;
                 text-align: center;
             }
 
             .project-content {
-                padding: 20px;
+                padding: 30px;
             }
 
             .project-nav {
-                gap: 8px;
+                gap: 10px;
+                padding: 20px;
             }
 
             .project-nav-btn {
-                font-size: 12px;
-                padding: 6px 12px;
+                font-size: 14px;
+                padding: 12px 18px;
             }
 
             .projects-hero {
-                padding: 40px 20px;
-            }
-
-            .hero-title {
-                font-size: 32px;
-            }
-
-            .hero-subtitle {
-                font-size: 16px;
+                padding: 60px 30px;
             }
 
             .image-collage {
                 grid-template-columns: 1fr;
-                grid-template-rows: 200px 150px 150px;
-                max-width: 400px;
+                grid-template-rows: 250px 200px 200px;
+                max-width: 500px;
             }
 
             .collage-large {
@@ -484,7 +622,7 @@
                 <div class="section-content">
                     <div class="project-detail">
                         <div class="project-content">
-                            <h2 style="color: #1a365d; margin-bottom: 20px;">Tactile Sensing Research</h2>
+                            <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 36px;">Tactile Sensing Research</h2>
                             <ul>
                                 <li>Research focuses on tactile sensing, specifically on increasing the speed of non-parallelized sensing grids by implementing a new algorithm called Probability-based Adaptive Sampling (PAS)</li>
                                 <li>The principle behind PAS is to smartly sample fewer pixels per frame and rather sample pixels near regions of high pressure</li>
@@ -497,7 +635,7 @@
                                     <div class="project-image-caption">PAS Algorithm Implementation</div>
                                 </div>
                             </div>
-                            <p style="margin-top: 20px; text-align: center;">
+                            <p style="margin-top: 30px; text-align: center;">
                                 <a href="ArikPaper.pdf" class="pdf-link">📄 Read Full Research Paper</a>
                             </p>
                         </div>
@@ -510,37 +648,63 @@
                 <h1 class="section-title">Contact Me</h1>
                 <div class="section-content">
                     <p>Feel free to reach out for collaborations, research opportunities, or any questions!</p>
-                    <div style="text-align: center; margin-top: 40px;">
-                        <p style="font-size: 18px; margin-bottom: 15px;"><strong>Email:</strong> yourname@institution.edu</p>
-                        <p style="font-size: 18px; margin-bottom: 15px;"><strong>LinkedIn:</strong> <a href="#" class="social-link">linkedin.com/in/yourprofile</a></p>
-                        <p style="font-size: 18px;"><strong>GitHub:</strong> <a href="https://github.com/yourusername" class="social-link">github.com/yourusername</a></p>
+                    <div style="text-align: center; margin-top: 50px;">
+                        <p style="font-size: 22px; margin-bottom: 20px;"><strong>Email:</strong> yourname@institution.edu</p>
+                        <p style="font-size: 22px; margin-bottom: 20px;"><strong>LinkedIn:</strong> <a href="#" class="social-link">linkedin.com/in/yourprofile</a></p>
+                        <p style="font-size: 22px;"><strong>GitHub:</strong> <a href="https://github.com/yourusername" class="social-link">github.com/yourusername</a></p>
                     </div>
                 </div>
             </div>
 
-            <!-- Projects Overview -->
+            <!-- Projects Overview - COMPLETELY NEW DESIGN -->
             <div id="projects" class="content-section">
-                <h1 class="section-title">Projects</h1>
-                <p class="projects-intro">Check out my different projects, all from clubs to coursework to DIY ideas!</p>
-                
-                <div class="projects-grid">
-                    <div class="project-card" onclick="showProject('cmos')">
-                        <h3>CMOS Imager</h3>
+                <!-- Project Navigation -->
+                <div class="project-nav">
+                    <div class="project-nav-btn" onclick="showProject('cmos')">CMOS Imager</div>
+                    <div class="project-nav-btn" onclick="showProject('sonar')">Sonar Ranging</div>
+                    <div class="project-nav-btn" onclick="showProject('hbridge')">H-Bridge Driver</div>
+                    <div class="project-nav-btn" onclick="showProject('dtmf')">DTMF Processing</div>
+                    <div class="project-nav-btn" onclick="showProject('cpp')">C/C++ Projects</div>
+                    <div class="project-nav-btn" onclick="showProject('ecg')">ECG Circuit</div>
+                </div>
+
+                <!-- Projects Hero Section -->
+                <div class="projects-hero">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Projects Portfolio</h1>
+                        <p class="hero-subtitle">Check out my different projects, all from clubs to coursework to DIY ideas!</p>
+                        
+                        <!-- Image Collage -->
+                        <div class="image-collage">
+                            <div class="collage-item collage-large" onclick="showProject('sonar')">
+                                <img src="sonarLayout.PNG" alt="Sonar PCB Layout">
+                                <div class="collage-overlay">Sonar Ranging PCB</div>
+                            </div>
+                            <div class="collage-item collage-top-right" onclick="showProject('cmos')">
+                                <img src="3T APS Layout.PNG" alt="3T APS Layout">
+                                <div class="collage-overlay">CMOS Imager</div>
+                            </div>
+                            <div class="collage-item collage-bottom-right" onclick="showProject('cpp')">
+                                <img src="kitten-point.png" alt="Image Processing">
+                                <div class="collage-overlay">C++ Image Processing</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-card" onclick="showProject('sonar')">
-                        <h3>Sonar Ranging PCB</h3>
-                    </div>
-                    <div class="project-card" onclick="showProject('hbridge')">
-                        <h3>H-Bridge Driver</h3>
-                    </div>
-                    <div class="project-card" onclick="showProject('dtmf')">
-                        <h3>DTMF Encoding & Decoding</h3>
-                    </div>
-                    <div class="project-card" onclick="showProject('cpp')">
-                        <h3>C/C++ Projects</h3>
-                    </div>
-                    <div class="project-card" onclick="showProject('ecg')">
-                        <h3>ECG Circuit</h3>
+                </div>
+
+                <!-- Remaining Projects -->
+                <div style="text-align: center; margin-top: 50px;">
+                    <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 36px;">Additional Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" onclick="showProject('dtmf')">
+                            <h3>DTMF Encoding & Decoding</h3>
+                        </div>
+                        <div class="project-card" onclick="showProject('hbridge')">
+                            <h3>H-Bridge Driver</h3>
+                        </div>
+                        <div class="project-card" onclick="showProject('ecg')">
+                            <h3>ECG Circuit</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -580,7 +744,7 @@
                                 <div class="project-image-caption">24x24 Pixel Array Full Layout</div>
                             </div>
                         </div>
-                        <p style="margin-top: 20px; text-align: center;">
+                        <p style="margin-top: 30px; text-align: center;">
                             <a href="Design Day Poster (1).pdf" class="pdf-link">📄 View Design Day Poster</a>
                         </p>
                     </div>
@@ -694,8 +858,8 @@
                         <h1>C/C++ Projects</h1>
                     </div>
                     <div class="project-content">
-                        <h3 style="color: #1a365d; margin-bottom: 15px;">Pseudo Photoshop © - Image Manipulation Suite</h3>
-                        <ul style="margin-bottom: 30px;">
+                        <h3>Pseudo Photoshop © - Image Manipulation Suite</h3>
+                        <ul style="margin-bottom: 40px;">
                             <li>Programmed comprehensive image manipulation software with advanced processing capabilities</li>
                             <li>Implemented image blurring algorithms using convolution kernels for various blur effects</li>
                             <li>Developed precise cropping functionality with user-defined region selection</li>
@@ -704,7 +868,7 @@
                             <li>Optimized processing algorithms for handling various image formats and sizes</li>
                         </ul>
 
-                        <h3 style="color: #1a365d; margin-bottom: 15px;">Chess Game Engine</h3>
+                        <h3>Chess Game Engine</h3>
                         <ul>
                             <li>Developed complete chess game implementation in C++ with full rule compliance</li>
                             <li>Programmed comprehensive move validation system for all piece types</li>
@@ -788,6 +952,15 @@
         </div>
     </footer>
 
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-container">
+            <button class="pdf-close" onclick="closePDF()">&times;</button>
+            <div id="pdfTitle" class="pdf-title"></div>
+            <iframe id="pdfViewer" class="pdf-viewer" src=""></iframe>
+        </div>
+    </div>
+
     <script>
         function showSection(sectionId) {
             // Hide all sections
@@ -831,6 +1004,44 @@
             // Show selected project
             document.getElementById(projectId).classList.add('active');
         }
+
+        function openPDF(pdfUrl, title) {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            const titleDiv = document.getElementById('pdfTitle');
+            
+            titleDiv.textContent = title;
+            viewer.src = pdfUrl;
+            modal.classList.add('active');
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePDF() {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            
+            modal.classList.remove('active');
+            viewer.src = '';
+            
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the PDF container
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDF();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDF();
+            }
+        });
     </script>
 </body>
 </html>
