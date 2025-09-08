@@ -349,15 +349,41 @@
             font-weight: 600;
         }
 
-        .pdf-link {
-            color: #1a365d;
+        /* PDF Button Style - More Prominent */
+        .pdf-button {
+            display: inline-block;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #1a365d, #2c5aa0);
+            color: white;
             text-decoration: none;
-            font-weight: 600;
+            border-radius: 12px;
             font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(26, 54, 93, 0.3);
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
         }
 
-        .pdf-link:hover {
-            text-decoration: underline;
+        .pdf-button:hover {
+            background: linear-gradient(135deg, #2c5aa0, #1a365d);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(26, 54, 93, 0.4);
+        }
+
+        .pdf-button:active {
+            transform: translateY(0);
+        }
+
+        /* Embedded PDF Viewer */
+        .embedded-pdf {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         /* Wide Image Full Width Style */
@@ -564,6 +590,10 @@
                 background: #1a365d;
                 color: white;
             }
+
+            .embedded-pdf {
+                height: 400px;
+            }
         }
     </style>
 </head>
@@ -635,7 +665,13 @@
                                 </div>
                                 <div class="project-image-main">
                                     <div style="text-align: center;">
-                                        <a href="#" onclick="openPDF('ArikPaper.pdf', 'Research Paper')" class="pdf-link" style="display: inline-block; padding: 20px 30px; background: #1a365d; color: white; border-radius: 8px; text-decoration: none; font-size: 18px;">📄 Read Full Research Paper</a>
+                                        <button onclick="openPDF('ArikPaper.pdf', 'Research Paper')" class="pdf-button">📄 Read Full Research Paper</button>
+                                        
+                                        <!-- Embedded PDF Viewer -->
+                                        <div style="margin-top: 30px;">
+                                            <h4 style="color: #1a365d; margin-bottom: 15px;">Research Paper Preview</h4>
+                                            <iframe src="ArikPaper.pdf" class="embedded-pdf" title="Research Paper"></iframe>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -735,9 +771,15 @@
                             <div class="wide-image-caption">24x24 Pixel Array Full Layout</div>
                         </div>
                         
-                        <p style="margin-top: 30px; text-align: center;">
-                            <a href="#" onclick="openPDF('Design Day Poster (1).pdf', 'Design Day Poster')" class="pdf-link">📄 View Design Day Poster</a>
-                        </p>
+                        <div style="text-align: center; margin-top: 30px;">
+                            <button onclick="openPDF('Design Day Poster (1).pdf', 'Design Day Poster')" class="pdf-button">📄 View Design Day Poster</button>
+                            
+                            <!-- Embedded PDF Viewer -->
+                            <div style="margin-top: 30px;">
+                                <h4 style="color: #1a365d; margin-bottom: 15px;">Design Day Poster Preview</h4>
+                                <iframe src="Design Day Poster (1).pdf" class="embedded-pdf" title="Design Day Poster"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -869,21 +911,20 @@
                         <h1>C/C++ Projects</h1>
                     </div>
                     
-                    <div class="project-content">
+                    <!-- Combined Image Processing Project -->
+                    <div class="project-content" style="margin-bottom: 40px;">
                         <div class="project-content-grid">
                             <div class="project-text">
+                                <h3>Pseudo Photoshop © - Image Manipulation Suite</h3>
                                 <ul style="margin-bottom: 0;">
                                     <li style="margin-bottom: 25px;">Programmed comprehensive image manipulation software with advanced processing capabilities</li>
                                     <li style="margin-bottom: 25px;">Implemented image blurring algorithms using convolution kernels for various blur effects</li>
                                     <li style="margin-bottom: 25px;">Developed precise cropping functionality with user-defined region selection</li>
+                                    <li style="margin-bottom: 25px;">Created grayscaling conversion using weighted RGB channel processing</li>
+                                    <li style="margin-bottom: 25px;">Engineered color inversion and binary image conversion features</li>
+                                    <li style="margin-bottom: 25px;">Optimized processing algorithms for handling various image formats and sizes</li>
                                 </ul>
                             </div>
-                            <div class="project-image-main">
-                                <img src="kitten-point.png" alt="Image Processing Effect">
-                            </div>
-                        </div>
-                        
-                        <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
                             <div class="project-image-main">
                                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 100%;">
                                     <div class="project-image">
@@ -891,22 +932,33 @@
                                         <div class="project-image-caption">Original Image</div>
                                     </div>
                                     <div class="project-image">
-                                        <img src="kitten_binary.png" alt="Binary Conversion" style="width: 100%; height: auto;">
-                                        <div class="project-image-caption">Binary Conversion</div>
+                                        <img src="kitten-point.png" alt="Processing Effect" style="width: 100%; height: auto;">
+                                        <div class="project-image-caption">Processing Effect</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-text">
-                                <ul style="margin-bottom: 0;">
-                                    <li style="margin-bottom: 25px;">Created grayscaling conversion using weighted RGB channel processing</li>
-                                    <li style="margin-bottom: 25px;">Engineered color inversion and binary image conversion features</li>
-                                    <li style="margin-bottom: 25px;">Optimized processing algorithms for handling various image formats and sizes</li>
-                                </ul>
-                            </div>
                         </div>
                         
-                        <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
+                        <div class="additional-images">
+                            <h4>Advanced Processing Examples</h4>
+                            <div class="project-images">
+                                <div class="project-image">
+                                    <img src="kitten_binary.png" alt="Binary Conversion">
+                                    <div class="project-image-caption">Binary Image Conversion</div>
+                                </div>
+                                <div class="project-image">
+                                    <img src="kitten-invert.png" alt="Color Inverted">
+                                    <div class="project-image-caption">Color Inversion Effect</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chess Game Project -->
+                    <div class="project-content">
+                        <div class="project-content-grid">
                             <div class="project-text">
+                                <h3>Chess Game Engine</h3>
                                 <ul style="margin-bottom: 0;">
                                     <li style="margin-bottom: 25px;">Developed complete chess game implementation in C++ with full rule compliance</li>
                                     <li style="margin-bottom: 25px;">Programmed comprehensive move validation system for all piece types</li>
@@ -916,16 +968,7 @@
                                 </ul>
                             </div>
                             <div class="project-image-main">
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 100%;">
-                                    <div class="project-image">
-                                        <img src="kitten-invert.png" alt="Color Inverted" style="width: 100%; height: auto;">
-                                        <div class="project-image-caption">Color Inversion Effect</div>
-                                    </div>
-                                    <div class="project-image">
-                                        <img src="chess.png" alt="Chess Game" style="width: 100%; height: auto;">
-                                        <div class="project-image-caption">Terminal Chess Interface</div>
-                                    </div>
-                                </div>
+                                <img src="chess.png" alt="Chess Game Interface">
                             </div>
                         </div>
                     </div>
