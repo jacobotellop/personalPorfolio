@@ -303,6 +303,7 @@
             align-items: center;
             justify-content: center;
             padding: 30px;
+            flex-direction: column;
         }
 
         .project-image-main img {
@@ -311,6 +312,14 @@
             object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 15px;
+            color: #6c757d;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .additional-images {
@@ -393,10 +402,10 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        /* Research PDF specific sizing */
+        /* Research PDF specific sizing - wider and bigger */
         .research-pdf {
-            width: 90%;
-            height: 750px;
+            width: 98%;
+            height: 550px;
             margin: 20px auto;
         }
 
@@ -618,6 +627,10 @@
             .embedded-pdf {
                 height: 800px;
             }
+
+            .research-pdf {
+                height: 400px;
+            }
         }
     </style>
 </head>
@@ -635,8 +648,8 @@
                 <nav class="nav-buttons">
                     <button class="nav-btn active" onclick="showSection('about')">About Me</button>
                     <button class="nav-btn" onclick="showSection('research')">Research</button>
-                    <button class="nav-btn" onclick="showSection('contact')">Contact Me</button>
                     <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+                    <button class="nav-btn" onclick="showSection('contact')">Contact Me</button>
                 </nav>
             </div>
         </div>
@@ -745,6 +758,7 @@
                             </div>
                             <div class="project-image-main">
                                 <img src="sonarLayout.PNG" alt="Featured Project - Sonar PCB Layout">
+                                <div class="image-caption">Featured Project - Sonar PCB Layout</div>
                             </div>
                         </div>
                     </div>
@@ -769,12 +783,14 @@
                             </div>
                             <div class="project-image-main">
                                 <img src="3T APS Layout.PNG" alt="3T APS Layout">
+                                <div class="image-caption">3 Transistor Active Pixel Sensor Layout</div>
                             </div>
                         </div>
                         
                         <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
                             <div class="project-image-main">
                                 <img src="C2MOS DLatch Circuit.png" alt="D-Latch Circuit">
+                                <div class="image-caption">CMOS D-Latch Circuit Design</div>
                             </div>
                             <div class="project-text">
                                 <ul style="margin-bottom: 0;">
@@ -798,6 +814,7 @@
                             </div>
                             <div class="project-image-main">
                                 <img src="CMOS4x4.png" alt="4x4 Grid Simulation">
+                                <div class="image-caption">4x4 Pixel Array Simulation Results</div>
                             </div>
                         </div>
                         
@@ -831,12 +848,14 @@
                             </div>
                             <div class="project-image-main">
                                 <img src="sonarLayout.PNG" alt="Sonar PCB Layout">
+                                <div class="image-caption">Sonar PCB Layout Design</div>
                             </div>
                         </div>
                         
                         <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
                             <div class="project-image-main">
                                 <img src="sonarSketch.jpg" alt="Sonar System Design Sketch">
+                                <div class="image-caption">System Architecture Design Sketch</div>
                             </div>
                             <div class="project-text">
                                 <ul>
@@ -881,6 +900,7 @@
                             </div>
                             <div class="project-image-main">
                                 <img src="hBridgeReal.png" alt="Physical PCB">
+                                <div class="image-caption">Fabricated H-Bridge PCB</div>
                             </div>
                         </div>
                         
@@ -919,6 +939,7 @@
                             </div>
                             <div class="project-image-main">
                                 <img src="dtmf.png" alt="DTMF Frequency Chart">
+                                <div class="image-caption">DTMF Frequency Mapping Table</div>
                             </div>
                         </div>
                         
@@ -948,8 +969,8 @@
                             <div class="project-text">
                                 <h3>Pseudo Photoshop © - Image Manipulation Suite</h3>
                                 <ul style="margin-bottom: 0;">
-                                    <li style="margin-bottom: 30px;">Programmed comprehensive image manipulation software with advanced processing capabilities. Implemented image blurring algorithms using convolution kernels for various blur effects and developed precise cropping functionality with user-defined region selection.</li>
-                                    <li style="margin-bottom: 30px;">Created grayscaling conversion using weighted RGB channel processing. Engineered color inversion and binary image conversion features with optimized processing algorithms for handling various image formats and sizes.</li>
+                                    <li style="margin-bottom: 30px;">Built image manipulation software with multiple processing algorithms including convolution-based blurring, precision cropping with coordinate selection, and RGB channel-based grayscaling. The software handles various image formats through optimized pixel-level operations.</li>
+                                    <li style="margin-bottom: 30px;">Implemented color space transformations including binary thresholding and complete color inversion through direct pixel manipulation. The system processes images efficiently while maintaining data integrity across different format specifications.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
@@ -969,10 +990,11 @@
                         <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
                             <div class="project-image-main">
                                 <img src="kitten_binary.png" alt="Binary Conversion">
+                                <div class="image-caption">Binary Image Conversion Result</div>
                             </div>
                             <div class="project-text">
                                 <ul style="margin-bottom: 0;">
-                                    <li style="margin-bottom: 30px;">Advanced color processing algorithms enable real-time image transformations with optimized performance across various formats and sizes. The system supports multiple image processing techniques including edge detection, noise reduction, and contrast enhancement.</li>
+                                    <li style="margin-bottom: 30px;">Implemented multiple image processing techniques including edge detection, noise reduction, and contrast enhancement. The system processes different file formats through standardized data structures and memory management protocols.</li>
                                 </ul>
                             </div>
                         </div>
@@ -980,11 +1002,12 @@
                         <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
                             <div class="project-text" style="display: flex; align-items: center; justify-content: center;">
                                 <ul style="margin-bottom: 0;">
-                                    <li style="margin-bottom: 30px;">Comprehensive testing suite validates all processing operations ensuring consistent results across different input conditions. The modular architecture allows for easy extension with additional image processing algorithms and filters.</li>
+                                    <li style="margin-bottom: 30px;">Built testing framework to validate processing operations across different input conditions. The modular code structure allows for addition of new algorithms and filter implementations while maintaining consistent performance.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
                                 <img src="kitten-invert.png" alt="Color Inverted">
+                                <div class="image-caption">Color Inversion Processing Result</div>
                             </div>
                         </div>
                     </div>
@@ -995,13 +1018,14 @@
                             <div class="project-text">
                                 <h3>Chess Game Engine</h3>
                                 <ul style="margin-bottom: 0;">
-                                    <li style="margin-bottom: 30px;">Developed complete chess game implementation in C++ with full rule compliance. Programmed comprehensive move validation system for all piece types including special moves like castling, en passant, and pawn promotion.</li>
-                                    <li style="margin-bottom: 30px;">Implemented advanced game state detection including checkmate and stalemate conditions. Created terminal-based user interface for local gameplay with clear board visualization and move input system.</li>
-                                    <li style="margin-bottom: 30px;">Engineered efficient board representation and game state management. The system maintains complete game history, supports move undo functionality, and includes comprehensive error handling for invalid moves and edge cases.</li>
+                                    <li style="margin-bottom: 30px;">Built complete chess game in C++ with full rule validation including castling, en passant, and pawn promotion mechanics. The move validation system checks legal moves for each piece type and handles edge cases.</li>
+                                    <li style="margin-bottom: 30px;">Implemented game state detection for checkmate and stalemate conditions through recursive board analysis. The terminal interface displays the board state and processes move input with algebraic notation parsing.</li>
+                                    <li style="margin-bottom: 30px;">Designed board representation using efficient data structures for game state management. The system tracks move history, supports undo functionality, and handles invalid move detection with appropriate error responses.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
                                 <img src="chess.png" alt="Chess Game Interface">
+                                <div class="image-caption">Terminal-Based Chess Game Interface</div>
                             </div>
                         </div>
                     </div>
@@ -1025,13 +1049,14 @@
                         <div class="project-content-grid">
                             <div class="project-text">
                                 <ul>
-                                    <li>Built functional electrocardiogram circuit capable of capturing and filtering ECG signals from wrist electrodes. Developed real-time ECG signal visualization system with live plotting capabilities for continuous monitoring applications.</li>
+                                    <li>Built functional electrocardiogram circuit capable of capturing and filtering ECG signals from wrist electrodes. Developed signal visualization system with plotting capabilities for analyzing cardiac electrical activity patterns.</li>
                                     <li>Designed 4-stage signal processing system optimized for biomedical signal acquisition. Implemented band-pass filter stage for initial signal conditioning and noise reduction with precise frequency response characteristics.</li>
                                     <li>Engineered instrumentation amplifier stage for high-gain, low-noise signal amplification. Integrated notch filter to eliminate 60Hz power line interference and added final amplification stage to achieve optimal signal levels for display and analysis.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
                                 <img src="bodeplotECG.png" alt="ECG Bode Plot">
+                                <div class="image-caption">ECG Circuit Frequency Response Analysis</div>
                             </div>
                         </div>
                     </div>
@@ -1084,8 +1109,8 @@
             const buttonMap = {
                 'about': 0,
                 'research': 1,
-                'contact': 2,
-                'projects': 3
+                'projects': 2,
+                'contact': 3
             };
             
             if (buttonMap.hasOwnProperty(sectionId)) {
