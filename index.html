@@ -20,11 +20,11 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Dark Mode - Complete Overhaul */
+        /* Dark Mode - Complete Overhaul with Brighter Text */
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #0d1117 !important;
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .header {
@@ -33,39 +33,39 @@
             }
 
             .header-text h1 {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .header-text p {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .logo {
                 background-color: #21262d !important;
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .nav-btn {
                 background-color: #21262d !important;
-                color: #f0f6fc !important;
+                color: #ffffff !important;
                 border: 1px solid #30363d !important;
             }
 
             .nav-btn:hover, .nav-btn.active {
                 background-color: #30363d !important;
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .profile-title, .section-title {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .about-section h2 {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .about-text, .section-content p {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .project-content {
@@ -74,11 +74,11 @@
             }
 
             .project-text li {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .project-text h3 {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .project-image-main {
@@ -86,11 +86,11 @@
             }
 
             .image-caption, .wide-image-caption {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .additional-images h4 {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .project-image {
@@ -99,7 +99,7 @@
 
             .project-image-caption {
                 background-color: #161b22 !important;
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .project-nav {
@@ -108,17 +108,17 @@
             }
 
             .project-nav-btn {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .project-nav-btn:hover {
-                color: #f0f6fc !important;
-                border-bottom-color: #f0f6fc !important;
+                color: #ffffff !important;
+                border-bottom-color: #ffffff !important;
             }
 
             .project-nav-btn.active {
-                color: #f0f6fc !important;
-                border-bottom-color: #f0f6fc !important;
+                color: #ffffff !important;
+                border-bottom-color: #ffffff !important;
             }
 
             .footer {
@@ -127,11 +127,11 @@
             }
 
             .contact-info h3 {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .contact-info p {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .social-link {
@@ -144,13 +144,13 @@
 
             .back-btn {
                 background-color: #21262d !important;
-                color: #f0f6fc !important;
+                color: #ffffff !important;
                 border: 1px solid #30363d !important;
             }
 
             .back-btn:hover {
                 background-color: #30363d !important;
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .embedded-pdf {
@@ -162,11 +162,11 @@
             }
 
             .pdf-title {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .project-header h1 {
-                color: #f0f6fc !important;
+                color: #ffffff !important;
             }
 
             .github-link {
@@ -175,7 +175,7 @@
             }
 
             .github-link p {
-                color: #8b949e !important;
+                color: #e6edf3 !important;
             }
 
             .github-link a {
@@ -206,11 +206,21 @@
                 background: #f85149 !important;
             }
 
+            /* Fix any remaining blue titles */
+            h1, h2, h3, h4, h5, h6 {
+                color: #ffffff !important;
+            }
+
+            /* Fix inline styles that might override */
+            [style*="color: #1a365d"] {
+                color: #ffffff !important;
+            }
+
             /* Responsive dark mode fixes */
             @media (max-width: 768px) {
                 .project-nav-btn.active {
                     background: #30363d !important;
-                    color: #f0f6fc !important;
+                    color: #ffffff !important;
                 }
             }
         }
