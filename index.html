@@ -17,6 +17,147 @@
             color: #333;
             line-height: 1.6;
             font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .header {
+                background-color: #2d2d2d;
+                border-bottom-color: #404040;
+            }
+
+            .header-text h1 {
+                color: #4a90e2;
+            }
+
+            .header-text p {
+                color: #b0b0b0;
+            }
+
+            .logo {
+                background-color: #4a90e2;
+            }
+
+            .nav-btn {
+                background-color: #404040;
+                color: #e0e0e0;
+            }
+
+            .nav-btn:hover, .nav-btn.active {
+                background-color: #4a90e2;
+            }
+
+            .profile-title, .section-title {
+                color: #4a90e2;
+            }
+
+            .about-section h2 {
+                color: #4a90e2;
+            }
+
+            .about-text, .section-content p {
+                color: #c0c0c0;
+            }
+
+            .project-content {
+                background-color: #2d2d2d;
+                border-color: #404040;
+            }
+
+            .project-text li {
+                color: #c0c0c0;
+            }
+
+            .project-text h3 {
+                color: #4a90e2;
+            }
+
+            .project-image-main {
+                background-color: #404040;
+            }
+
+            .image-caption, .wide-image-caption {
+                color: #b0b0b0;
+            }
+
+            .additional-images h4 {
+                color: #4a90e2;
+            }
+
+            .project-image {
+                border-color: #404040;
+            }
+
+            .project-image-caption {
+                background-color: #404040;
+                color: #b0b0b0;
+            }
+
+            .project-nav {
+                border-bottom-color: #404040;
+            }
+
+            .project-nav-btn {
+                color: #b0b0b0;
+            }
+
+            .project-nav-btn:hover {
+                color: #4a90e2;
+                border-bottom-color: #4a90e2;
+            }
+
+            .project-nav-btn.active {
+                color: #4a90e2;
+                border-bottom-color: #4a90e2;
+            }
+
+            .footer {
+                background-color: #2d2d2d;
+                border-top-color: #404040;
+            }
+
+            .contact-info h3 {
+                color: #4a90e2;
+            }
+
+            .contact-info p {
+                color: #b0b0b0;
+            }
+
+            .social-link {
+                color: #4a90e2;
+            }
+
+            .back-btn {
+                background-color: #404040;
+                color: #e0e0e0;
+            }
+
+            .back-btn:hover {
+                background-color: #4a90e2;
+            }
+
+            .embedded-pdf {
+                border-color: #404040;
+            }
+
+            .pdf-container {
+                background-color: #2d2d2d;
+            }
+
+            .pdf-title {
+                color: #4a90e2;
+            }
+
+            .project-header h1 {
+                color: #4a90e2;
+            }
         }
 
         .container {
@@ -176,6 +317,33 @@
             margin-bottom: 40px;
             text-align: center;
             font-weight: 500;
+        }
+
+        /* GitHub Link Style */
+        .github-link {
+            background-color: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .github-link p {
+            margin: 0;
+            font-size: 18px;
+            color: #6c757d;
+            font-weight: 600;
+        }
+
+        .github-link a {
+            color: #1a365d;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .github-link a:hover {
+            text-decoration: underline;
         }
 
         /* PROJECT NAVIGATION - Modern Tab Style like SpineArt.com */
@@ -407,7 +575,7 @@
             width: 100%;
             height: 700px;
             margin: 20px auto;
-            max-width: 1100px;
+            max-width: 1600px;
         }
 
         /* Zoom out large layout image */
@@ -663,7 +831,7 @@
             <div id="about" class="content-section active">
                 <div class="profile-section">
                     <div class="profile-image">
-                        <img src="jacoboPortrait.png">
+                        <img src="jacoboPortrait.png" alt="Profile Photo" class="profile-photo">
                     </div>
                     <div class="profile-content">
                         <h1 class="profile-title">Jacobo Tello</h1>
@@ -708,6 +876,10 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="github-link">
+                                <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for code and implementation files.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -739,9 +911,9 @@
                     <div class="project-nav-btn" onclick="showProject('cmos')">CMOS Imager</div>
                     <div class="project-nav-btn" onclick="showProject('sonar')">Sonar Ranging</div>
                     <div class="project-nav-btn" onclick="showProject('hbridge')">H-Bridge Driver</div>
-                    <div class="project-nav-btn" onclick="showProject('dtmf')">DTMF Processing</div>
-                    <div class="project-nav-btn" onclick="showProject('cpp')">C/C++ Projects</div>
                     <div class="project-nav-btn" onclick="showProject('ecg')">ECG Circuit</div>
+                    <div class="project-nav-btn" onclick="showProject('cpp')">C/C++ Projects</div>
+                    <div class="project-nav-btn" onclick="showProject('dtmf')">DTMF Processing</div>
                 </div>
 
                 <!-- Projects Overview Content - Two Column Layout -->
@@ -755,9 +927,9 @@
                                     <li><strong>CMOS Imager:</strong> 24x24 pixel sensor array designed in Cadence Virtuoso with complete 3T APS implementation and advanced timing control systems.</li>
                                     <li><strong>Sonar Ranging System:</strong> Precision ultrasonic distance measurement using 40kHz transducers and PID control with dynamic gain adjustment capabilities.</li>
                                     <li><strong>H-Bridge Driver:</strong> High-performance 20kHz motor control PCB handling 5A loads with comprehensive thermal management and protection features.</li>
-                                    <li><strong>DTMF Processing:</strong> MATLAB signal processing system for encoding/decoding telephone tones with advanced noise filtering and frequency analysis.</li>
-                                    <li><strong>C/C++ Projects:</strong> Image manipulation software and complete chess game engine with full rule compliance and terminal-based interface.</li>
                                     <li><strong>ECG Circuit:</strong> 4-stage biomedical signal processing for real-time heart monitoring with advanced filtering and amplification stages.</li>
+                                    <li><strong>C/C++ Projects:</strong> Image manipulation software and complete chess game engine with full rule compliance and terminal-based interface.</li>
+                                    <li><strong>DTMF Processing:</strong> MATLAB signal processing system for encoding/decoding telephone tones with advanced noise filtering and frequency analysis.</li>
                                 </ul>
                                 <p style="margin-top: 30px; text-align: left; color: #6c757d; font-style: italic; font-weight: 500;">Click on the navigation tabs above to explore each project in detail.</p>
                             </div>
@@ -837,6 +1009,10 @@
                                 <iframe src="Design Day Poster (1).pdf" class="embedded-pdf" title="Design Day Poster"></iframe>
                             </div>
                         </div>
+
+                        <div class="github-link">
+                            <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for layout and schematic files.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -889,6 +1065,10 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="github-link">
+                            <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for PCB layout and schematic files.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -928,39 +1108,58 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="github-link">
+                            <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for PCB layout and schematic files.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- DTMF System -->
-            <div id="dtmf" class="content-section">
+            <!-- ECG Circuit -->
+            <div id="ecg" class="content-section">
                 <div class="project-detail">
                     <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
                     <div class="project-header">
-                        <h1>DTMF Signal Processing System</h1>
+                        <h1>ECG Circuit Design</h1>
                     </div>
                     <div class="project-content">
+                        <!-- ECGschematic.png is 2.44 ratio - wide, display full width at top -->
+                        <div class="wide-image-section">
+                            <img src="ECGschematic.png" alt="ECG Schematic">
+                            <div class="wide-image-caption">Complete ECG Circuit Schematic in LTSpice</div>
+                        </div>
+                        
                         <div class="project-content-grid">
                             <div class="project-text">
                                 <ul>
-                                    <li>System includes comprehensive MATLAB scripts for encoding numeric passcodes into Dual Tone Multi Frequency (DTMF) signal waveforms. The frequency mapping system maps each digit to specific pairs of frequencies according to DTMF standards.</li>
-                                    <li>DTMF decoder processes noisy input signals through advanced signal processing techniques. The system utilizes filtering, energy shifting, and Fourier analysis for accurate frequency extraction from incoming signals.</li>
-                                    <li>Digit string processing capability handles continuous multi-digit sequences. Automatic signal splitting algorithm isolates individual digits from continuous streams with high accuracy and noise immunity.</li>
+                                    <li>Circuit captures and filters ECG signals from wrist electrodes with signal visualization system providing plotting capabilities for analyzing cardiac electrical activity patterns.</li>
+                                    <li>The 4-stage signal processing system optimizes biomedical signal acquisition with band-pass filter stage for initial signal conditioning and noise reduction with precise frequency response characteristics.</li>
+                                    <li>Instrumentation amplifier stage provides high-gain, low-noise signal amplification. System includes notch filter to eliminate 60Hz power line interference and final amplification stage to achieve optimal signal levels for display and analysis.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
-                                <img src="dtmf.png" alt="DTMF Frequency Chart">
-                                <div class="image-caption">DTMF Frequency Mapping Table</div>
+                                <img src="bodeplotECG.png" alt="ECG Bode Plot">
+                                <div class="image-caption">ECG Circuit Frequency Response Analysis</div>
                             </div>
                         </div>
                         
-                        <!-- dtmfFlowchart.png is 2.6 ratio - wide, display full width -->
                         <div class="additional-images">
-                            <h4>Signal Processing Implementation</h4>
-                            <div class="wide-image-section">
-                                <img src="dtmfFlowchart.png" alt="DTMF Processing Flowchart">
-                                <div class="wide-image-caption">Signal Processing Flowchart</div>
+                            <h4>Circuit Implementation & Results</h4>
+                            <div class="project-images">
+                                <div class="project-image">
+                                    <img src="ECGrealPic.png" alt="ECG Breadboard Circuit">
+                                    <div class="project-image-caption">Breadboarded ECG Circuit Implementation</div>
+                                </div>
+                                <div class="project-image" style="display: flex; flex-direction: column; justify-content: center;">
+                                    <img src="ECGplot.jpg" alt="ECG Signal Output">
+                                    <div class="project-image-caption">Actual ECG Signal from Oscilloscope</div>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="github-link">
+                            <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for schematic files.</p>
                         </div>
                     </div>
                 </div>
@@ -1039,50 +1238,47 @@
                                 <div class="image-caption">Terminal-Based Chess Game Interface</div>
                             </div>
                         </div>
+
+                        <div class="github-link">
+                            <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for code files.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ECG Circuit -->
-            <div id="ecg" class="content-section">
+            <!-- DTMF System -->
+            <div id="dtmf" class="content-section">
                 <div class="project-detail">
                     <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
                     <div class="project-header">
-                        <h1>ECG Circuit Design</h1>
+                        <h1>DTMF Signal Processing System</h1>
                     </div>
                     <div class="project-content">
-                        <!-- ECGschematic.png is 2.44 ratio - wide, display full width at top -->
-                        <div class="wide-image-section">
-                            <img src="ECGschematic.png" alt="ECG Schematic">
-                            <div class="wide-image-caption">Complete ECG Circuit Schematic in LTSpice</div>
-                        </div>
-                        
                         <div class="project-content-grid">
                             <div class="project-text">
                                 <ul>
-                                    <li>Circuit captures and filters ECG signals from wrist electrodes with signal visualization system providing plotting capabilities for analyzing cardiac electrical activity patterns.</li>
-                                    <li>The 4-stage signal processing system optimizes biomedical signal acquisition with band-pass filter stage for initial signal conditioning and noise reduction with precise frequency response characteristics.</li>
-                                    <li>Instrumentation amplifier stage provides high-gain, low-noise signal amplification. System includes notch filter to eliminate 60Hz power line interference and final amplification stage to achieve optimal signal levels for display and analysis.</li>
+                                    <li>System includes comprehensive MATLAB scripts for encoding numeric passcodes into Dual Tone Multi Frequency (DTMF) signal waveforms. The frequency mapping system maps each digit to specific pairs of frequencies according to DTMF standards.</li>
+                                    <li>DTMF decoder processes noisy input signals through advanced signal processing techniques. The system utilizes filtering, energy shifting, and Fourier analysis for accurate frequency extraction from incoming signals.</li>
+                                    <li>Digit string processing capability handles continuous multi-digit sequences. Automatic signal splitting algorithm isolates individual digits from continuous streams with high accuracy and noise immunity.</li>
                                 </ul>
                             </div>
                             <div class="project-image-main">
-                                <img src="bodeplotECG.png" alt="ECG Bode Plot">
-                                <div class="image-caption">ECG Circuit Frequency Response Analysis</div>
+                                <img src="dtmf.png" alt="DTMF Frequency Chart">
+                                <div class="image-caption">DTMF Frequency Mapping Table</div>
                             </div>
                         </div>
                         
+                        <!-- dtmfFlowchart.png is 2.6 ratio - wide, display full width -->
                         <div class="additional-images">
-                            <h4>Circuit Implementation & Results</h4>
-                            <div class="project-images">
-                                <div class="project-image">
-                                    <img src="ECGrealPic.png" alt="ECG Breadboard Circuit">
-                                    <div class="project-image-caption">Breadboarded ECG Circuit Implementation</div>
-                                </div>
-                                <div class="project-image" style="display: flex; flex-direction: column; justify-content: center;">
-                                    <img src="ECGplot.jpg" alt="ECG Signal Output">
-                                    <div class="project-image-caption">Actual ECG Signal from Oscilloscope</div>
-                                </div>
+                            <h4>Signal Processing Implementation</h4>
+                            <div class="wide-image-section">
+                                <img src="dtmfFlowchart.png" alt="DTMF Processing Flowchart">
+                                <div class="wide-image-caption">Signal Processing Flowchart</div>
                             </div>
+                        </div>
+
+                        <div class="github-link">
+                            <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for code files.</p>
                         </div>
                     </div>
                 </div>
