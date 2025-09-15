@@ -37,7 +37,7 @@
             }
 
             .header-text p {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .logo {
@@ -65,7 +65,7 @@
             }
 
             .about-text, .section-content p {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .project-content {
@@ -74,7 +74,7 @@
             }
 
             .project-text li {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .project-text h3 {
@@ -86,7 +86,7 @@
             }
 
             .image-caption, .wide-image-caption {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .additional-images h4 {
@@ -99,7 +99,7 @@
 
             .project-image-caption {
                 background-color: #161b22 !important;
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .project-nav {
@@ -108,7 +108,7 @@
             }
 
             .project-nav-btn {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .project-nav-btn:hover {
@@ -131,7 +131,7 @@
             }
 
             .contact-info p {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .social-link {
@@ -175,7 +175,7 @@
             }
 
             .github-link p {
-                color: #e6edf3 !important;
+                color: #ffffff !important;
             }
 
             .github-link a {
@@ -206,13 +206,32 @@
                 background: #f85149 !important;
             }
 
-            /* Fix any remaining blue titles */
+            /* Fix any remaining blue titles - more aggressive overrides */
             h1, h2, h3, h4, h5, h6 {
                 color: #ffffff !important;
             }
 
-            /* Fix inline styles that might override */
+            /* Override ALL inline styles with blue color */
+            * {
+                color: inherit !important;
+            }
+
+            /* Specific overrides for inline styled elements */
             [style*="color: #1a365d"] {
+                color: #ffffff !important;
+            }
+
+            h2[style*="color: #1a365d"] {
+                color: #ffffff !important;
+            }
+
+            /* Make sure project text headers are white */
+            .project-text h2 {
+                color: #ffffff !important;
+            }
+
+            /* Override any remaining styled elements */
+            div[style*="color: #1a365d"] {
                 color: #ffffff !important;
             }
 
