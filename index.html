@@ -18,7 +18,72 @@
             line-height: 1.6;
             font-weight: 500;
             transition: background-color 0.3s ease, color 0.3s ease;
+            scroll-behavior: smooth;
         }
+
+        /* Scroll Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.7s ease-out;
+        }
+
+        .slide-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.7s ease-out;
+        }
+
+        .slide-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s ease-out;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Staggered animation delays */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
 
         /* Dark Mode - Complete Overhaul with Brighter Text */
         @media (prefers-color-scheme: dark) {
@@ -914,12 +979,12 @@
             <!-- About Me Section -->
             <div id="about" class="content-section active">
                 <div class="profile-section">
-                    <div class="profile-image">
+                    <div class="profile-image slide-right">
                         <img src="jacoboPortrait.png" alt="Profile Photo" class="profile-photo">
                     </div>
-                    <div class="profile-content">
-                        <h1 class="profile-title">Jacobo Tello</h1>
-                        <div class="about-section">
+                    <div class="profile-content slide-left">
+                        <h1 class="profile-title fade-in">Jacobo Tello</h1>
+                        <div class="about-section fade-in stagger-1">
                             <h2>A Bit About Me</h2>
                             <p class="about-text">
                                 My name is Jacobo Tello. I am currently a junior studying Electrical Engineering at Johns Hopkins University. I am interested in hardware, embedded systems, and robotics. This virtual portfolio showcases all of my projects and research during my time at Hopkins.
@@ -931,25 +996,25 @@
 
             <!-- Research Section -->
             <div id="research" class="content-section">
-                <h1 class="section-title">Research</h1>
+                <h1 class="section-title fade-in">Research</h1>
                 <div class="section-content">
                     <div class="project-detail">
-                        <div class="project-content">
+                        <div class="project-content slide-up">
                             <!-- PASlong.png is 4.32 ratio - extremely wide, display full width at top -->
-                            <div class="wide-image-section">
+                            <div class="wide-image-section fade-in stagger-1">
                                 <img src="PASlong.png" alt="PAS Algorithm Visualization">
                                 <div class="wide-image-caption">Probability-based Adaptive Sampling (PAS) Algorithm Implementation</div>
                             </div>
                             
                             <div class="project-content-grid">
-                                <div class="project-text">
+                                <div class="project-text slide-left stagger-2">
                                     <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 42px;">Tactile Sensing Paper (Under Review) </h2>
                                     <ul>
                                         <li>Research focuses on tactile sensing, specifically on increasing the speed of non-parallelized sensing grids by implementing a new algorithm called Probability-based Adaptive Sampling (PAS). The principle behind PAS is to smartly sample fewer pixels per frame and rather sample pixels near regions of high pressure.</li>
                                         <li>The algorithm maps each pixel in the grid to a probability, and increases that probability if that pixel is near a region of recurrent high pressure. Unsampled pixels are then reconstructed using a sampling dictionary to produce the final tactile image with enhanced accuracy and reduced computational overhead.</li>
                                     </ul>
                                 </div>
-                                <div class="project-image-main">
+                                <div class="project-image-main slide-right stagger-3">
                                     <div style="text-align: center;">
                                         <!-- Embedded PDF Viewer -->
                                         <div style="margin-bottom: 30px;">
@@ -961,7 +1026,7 @@
                                 </div>
                             </div>
 
-                            <div class="github-link">
+                            <div class="github-link fade-in stagger-4">
                                 <p>Check out my <a href="https://github.com/jacobotellop" target="_blank">GitHub</a> for code and implementation files.</p>
                             </div>
                         </div>
@@ -971,16 +1036,16 @@
 
             <!-- Contact Me Section -->
             <div id="contact" class="content-section">
-                <h1 class="section-title">Contact Me</h1>
+                <h1 class="section-title fade-in">Contact Me</h1>
                 <div class="section-content">
-                    <p>Thanks for sticking around! Feel free to reach out using any of the links below.</p>
-                    <div style="text-align: center; margin-top: 50px;">
-                        <p style="font-size: 26px; margin-bottom: 20px; font-weight: 600;"><strong>Email:</strong> jacobotellop@gmail.com</p>
-                        <p style="font-size: 26px; margin-bottom: 20px; font-weight: 600;"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jacobo-tello-54181b2a7" class="social-link">linkedin.com/in/jacobo-tello-54181b2a7</a></p>
-                        <p style="font-size: 26px; margin-bottom: 40px; font-weight: 600;"><strong>GitHub:</strong> <a href="https://github.com/jacobotellop" class="social-link">github.com/jacobotellop</a></p>
+                    <p class="fade-in stagger-1">Thanks for sticking around! Feel free to reach out using any of the links below.</p>
+                    <div style="text-align: center; margin-top: 50px;" class="slide-up stagger-2">
+                        <p style="font-size: 26px; margin-bottom: 20px; font-weight: 600;" class="fade-in stagger-3"><strong>Email:</strong> jacobotellop@gmail.com</p>
+                        <p style="font-size: 26px; margin-bottom: 20px; font-weight: 600;" class="fade-in stagger-4"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jacobo-tello-54181b2a7" class="social-link">linkedin.com/in/jacobo-tello-54181b2a7</a></p>
+                        <p style="font-size: 26px; margin-bottom: 40px; font-weight: 600;" class="fade-in stagger-5"><strong>GitHub:</strong> <a href="https://github.com/jacobotellop" class="social-link">github.com/jacobotellop</a></p>
                         
                         <!-- CV Download Section -->
-                        <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #e9ecef;">
+                        <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #e9ecef;" class="scale-in stagger-6">
                             <p style="font-size: 26px; margin-bottom: 30px; font-weight: 600;"><strong>Download Resume:</strong></p>
                             <a href="resumeJacoboTello2025.pdf" class="pdf-button" style="font-size: 20px; padding: 20px 40px;">📄 Download CV/Resume</a>
                         </div>
@@ -991,20 +1056,20 @@
             <!-- Projects Overview - Two Column Layout -->
             <div id="projects" class="content-section">
                 <!-- Modern Tab Navigation -->
-                <div class="project-nav">
-                    <div class="project-nav-btn" onclick="showProject('cmos')">CMOS Imager</div>
-                    <div class="project-nav-btn" onclick="showProject('sonar')">Sonar Ranging</div>
-                    <div class="project-nav-btn" onclick="showProject('hbridge')">H-Bridge Driver</div>
-                    <div class="project-nav-btn" onclick="showProject('ecg')">ECG Circuit</div>
-                    <div class="project-nav-btn" onclick="showProject('cpp')">C/C++ Projects</div>
-                    <div class="project-nav-btn" onclick="showProject('dtmf')">DTMF Processing</div>
+                <div class="project-nav fade-in">
+                    <div class="project-nav-btn stagger-1" onclick="showProject('cmos')">CMOS Imager</div>
+                    <div class="project-nav-btn stagger-2" onclick="showProject('sonar')">Sonar Ranging</div>
+                    <div class="project-nav-btn stagger-3" onclick="showProject('hbridge')">H-Bridge Driver</div>
+                    <div class="project-nav-btn stagger-4" onclick="showProject('ecg')">ECG Circuit</div>
+                    <div class="project-nav-btn stagger-5" onclick="showProject('cpp')">C/C++ Projects</div>
+                    <div class="project-nav-btn stagger-6" onclick="showProject('dtmf')">DTMF Processing</div>
                 </div>
 
                 <!-- Projects Overview Content - Two Column Layout -->
                 <div class="project-detail">
-                    <div class="project-content">
+                    <div class="project-content slide-up">
                         <div class="project-content-grid">
-                            <div class="project-text">
+                            <div class="project-text slide-left stagger-1">
                                 <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 48px;">Projects Portfolio</h2>
                                 <p style="font-size: 22px; margin-bottom: 20px; text-align: left; font-weight: 600;">Check out my different projects, all from clubs to coursework to DIY ideas!</p>
                                 <ul>
@@ -1017,7 +1082,7 @@
                                 </ul>
                                 <p style="margin-top: 30px; text-align: left; color: #6c757d; font-style: italic; font-weight: 500;">Click on the navigation tabs above to explore each project in detail.</p>
                             </div>
-                            <div class="project-image-main">
+                            <div class="project-image-main slide-right stagger-2">
                                 <img src="sonarLayout.PNG" alt="Featured Project - Sonar PCB Layout">
                                 <div class="image-caption">Featured Project - Sonar PCB Layout</div>
                             </div>
@@ -1395,6 +1460,34 @@
     </div>
 
     <script>
+        // Smooth scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations when page loads
+        function initAnimations() {
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .scale-in');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Run animations after page loads
+        window.addEventListener('load', initAnimations);
+        // Also run on DOMContentLoaded in case load event already fired
+        document.addEventListener('DOMContentLoaded', initAnimations);
+
         function showSection(sectionId) {
             // Hide all sections
             document.querySelectorAll('.content-section').forEach(section => {
@@ -1407,7 +1500,18 @@
             });
             
             // Show selected section
-            document.getElementById(sectionId).classList.add('active');
+            const targetSection = document.getElementById(sectionId);
+            targetSection.classList.add('active');
+            
+            // Re-observe elements in the newly shown section
+            setTimeout(() => {
+                const newAnimatedElements = targetSection.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .scale-in');
+                newAnimatedElements.forEach(el => {
+                    if (!el.classList.contains('visible')) {
+                        observer.observe(el);
+                    }
+                });
+            }, 100);
             
             // Add active class to corresponding nav button
             const navButtons = document.querySelectorAll('.nav-btn');
@@ -1435,7 +1539,18 @@
             });
             
             // Show selected project
-            document.getElementById(projectId).classList.add('active');
+            const targetProject = document.getElementById(projectId);
+            targetProject.classList.add('active');
+            
+            // Re-observe elements in the newly shown project
+            setTimeout(() => {
+                const newAnimatedElements = targetProject.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .scale-in');
+                newAnimatedElements.forEach(el => {
+                    if (!el.classList.contains('visible')) {
+                        observer.observe(el);
+                    }
+                });
+            }, 100);
         }
 
         function openPDF(pdfUrl, title) {
@@ -1474,6 +1589,20 @@
             if (e.key === 'Escape') {
                 closePDF();
             }
+        });
+
+        // Add smooth scroll behavior to navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     </script>
 </body>
