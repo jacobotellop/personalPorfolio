@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacobo Tello - Research Scientist</title>
+    <title>Jacobo Tello - ePortfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,163 +13,10 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f0f6ff 0%, #e6f2ff 50%, #f8fbff 100%);
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
             font-weight: 500;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            min-height: 100vh;
-        }
-
-        /* JHU Color Variables */
-        :root {
-            --jhu-blue: #002d72;
-            --jhu-light-blue: #0f4da2;
-            --jhu-accent-blue: #1f5fa0;
-            --jhu-gray: #6c757d;
-            --jhu-light-gray: #e9ecef;
-            --jhu-white: #ffffff;
-            --jhu-dark-gray: #343a40;
-        }
-
-        /* Dark Mode */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1a1a1a;
-                color: #e0e0e0;
-            }
-
-            .header {
-                background-color: #2d2d2d;
-                border-bottom-color: #404040;
-            }
-
-            .header-text h1 {
-                color: #4a90e2;
-            }
-
-            .header-text p {
-                color: #b0b0b0;
-            }
-
-            .logo {
-                background-color: var(--jhu-blue);
-            }
-
-            .nav-btn {
-                background-color: #404040;
-                color: #e0e0e0;
-            }
-
-            .nav-btn:hover, .nav-btn.active {
-                background-color: var(--jhu-blue);
-            }
-
-            .profile-title, .section-title {
-                color: #4a90e2;
-            }
-
-            .about-section h2 {
-                color: #4a90e2;
-            }
-
-            .about-text {
-                color: #c0c0c0;
-            }
-
-            .project-content {
-                background-color: #2d2d2d;
-                border-color: #404040;
-            }
-
-            .project-text li {
-                color: #c0c0c0;
-            }
-
-            .project-text h3 {
-                color: #4a90e2;
-            }
-
-            .project-image-main {
-                background-color: #404040;
-            }
-
-            .image-caption, .wide-image-caption {
-                color: #b0b0b0;
-            }
-
-            .additional-images h4 {
-                color: #4a90e2;
-            }
-
-            .project-image {
-                border-color: #404040;
-            }
-
-            .project-image-caption {
-                background-color: #404040;
-                color: #b0b0b0;
-            }
-
-            .project-nav {
-                border-bottom-color: #404040;
-            }
-
-            .project-nav-btn {
-                color: #b0b0b0;
-            }
-
-            .project-nav-btn:hover {
-                color: #4a90e2;
-                border-bottom-color: #4a90e2;
-            }
-
-            .project-nav-btn.active {
-                color: #4a90e2;
-                border-bottom-color: #4a90e2;
-            }
-
-            .footer {
-                background-color: #2d2d2d;
-                border-top-color: #404040;
-            }
-
-            .contact-info h3 {
-                color: #4a90e2;
-            }
-
-            .contact-info p {
-                color: #b0b0b0;
-            }
-
-            .social-link {
-                color: #4a90e2;
-            }
-
-            .back-btn {
-                background-color: #404040;
-                color: #e0e0e0;
-            }
-
-            .back-btn:hover {
-                background-color: var(--jhu-blue);
-            }
-
-            .embedded-pdf {
-                border-color: #404040;
-            }
-
-            .pdf-container {
-                background-color: #2d2d2d;
-            }
-
-            .pdf-title {
-                color: #4a90e2;
-            }
-
-            .section-content p {
-                color: #c0c0c0;
-            }
         }
 
         .container {
@@ -560,7 +407,7 @@
             width: 100%;
             height: 700px;
             margin: 20px auto;
-            max-width: 1600px;
+            max-width: 1100px;
         }
 
         /* Zoom out large layout image */
@@ -816,7 +663,7 @@
             <div id="about" class="content-section active">
                 <div class="profile-section">
                     <div class="profile-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Profile Photo" class="profile-photo">
+                        <img src="jacoboPortrait.png">
                     </div>
                     <div class="profile-content">
                         <h1 class="profile-title">Jacobo Tello</h1>
@@ -844,7 +691,7 @@
                             
                             <div class="project-content-grid">
                                 <div class="project-text">
-                                    <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 42px;">Tactile Sensing Research</h2>
+                                    <h2 style="color: #1a365d; margin-bottom: 30px; font-size: 42px;">Tactile Sensing Paper (Under Review) </h2>
                                     <ul>
                                         <li>Research focuses on tactile sensing, specifically on increasing the speed of non-parallelized sensing grids by implementing a new algorithm called Probability-based Adaptive Sampling (PAS). The principle behind PAS is to smartly sample fewer pixels per frame and rather sample pixels near regions of high pressure.</li>
                                         <li>The algorithm maps each pixel in the grid to a probability, and increases that probability if that pixel is near a region of recurrent high pressure. Unsampled pixels are then reconstructed using a sampling dictionary to produce the final tactile image with enhanced accuracy and reduced computational overhead.</li>
@@ -870,7 +717,7 @@
             <div id="contact" class="content-section">
                 <h1 class="section-title">Contact Me</h1>
                 <div class="section-content">
-                    <p>Feel free to reach out for collaborations, research opportunities, or any questions!</p>
+                    <p>Thanks for sticking around! Feel free to reach out using any of the links below.</p>
                     <div style="text-align: center; margin-top: 50px;">
                         <p style="font-size: 26px; margin-bottom: 20px; font-weight: 600;"><strong>Email:</strong> jacobotellop@gmail.com</p>
                         <p style="font-size: 26px; margin-bottom: 20px; font-weight: 600;"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jacobo-tello-54181b2a7" class="social-link">linkedin.com/in/jacobo-tello-54181b2a7</a></p>
@@ -892,9 +739,9 @@
                     <div class="project-nav-btn" onclick="showProject('cmos')">CMOS Imager</div>
                     <div class="project-nav-btn" onclick="showProject('sonar')">Sonar Ranging</div>
                     <div class="project-nav-btn" onclick="showProject('hbridge')">H-Bridge Driver</div>
-                    <div class="project-nav-btn" onclick="showProject('ecg')">ECG Circuit</div>
-                    <div class="project-nav-btn" onclick="showProject('cpp')">C/C++ Projects</div>
                     <div class="project-nav-btn" onclick="showProject('dtmf')">DTMF Processing</div>
+                    <div class="project-nav-btn" onclick="showProject('cpp')">C/C++ Projects</div>
+                    <div class="project-nav-btn" onclick="showProject('ecg')">ECG Circuit</div>
                 </div>
 
                 <!-- Projects Overview Content - Two Column Layout -->
@@ -961,7 +808,7 @@
                         <div class="project-content-grid" style="margin-top: 40px; border-top: 1px solid #e9ecef; padding-top: 40px;">
                             <div class="project-image-main">
                                 <img src="Final Deadass.png" alt="Final Array Layout">
-                                <div class="image-caption">24x24 Pixel Array Full Layout</div>
+                                <div class="image-caption">Shift Register and Column Select Signals</div>
                             </div>
                             <div class="project-image-main">
                                 <img src="atpsSchematic.png" alt="APS Schematic">
@@ -1000,6 +847,7 @@
                     <button class="back-btn" onclick="showSection('projects')">← Back to Projects</button>
                     <div class="project-header">
                         <h1>Ultrasonic Sonar Ranging System</h1>
+                        <p><em>(Assembly in Progress)</em></p>
                     </div>
                     <div class="project-content">
                         <div class="project-content-grid">
@@ -1144,7 +992,7 @@
                                     </div>
                                     <div class="project-image">
                                         <img src="kitten-point.png" alt="Processing Effect" style="width: 100%; height: auto;">
-                                        <div class="project-image-caption">Pointillism Processing Effect</div>
+                                        <div class="project-image-caption">Blur Processing Effect</div>
                                     </div>
                                 </div>
                             </div>
