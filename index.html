@@ -754,6 +754,69 @@
             font-weight: 600;
         }
 
+        /* Image Lightbox */
+        .image-lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            cursor: zoom-out;
+        }
+
+        .image-lightbox.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            border-radius: 8px;
+        }
+
+        .image-lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .image-lightbox-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Make project images clickable */
+        .project-image-main img,
+        .project-image img,
+        .wide-image-section img {
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .project-image-main img:hover,
+        .project-image img:hover,
+        .wide-image-section img:hover {
+            transform: scale(1.02);
+        }
+
         /* PDF Viewer Modal */
         .pdf-modal {
             display: none;
@@ -961,7 +1024,7 @@
                     <div class="logo">JT</div>
                     <div class="header-text">
                         <h1>Jacobo Tello</h1>
-                        <p>Electrical Engineering @ Johns Hopkins University</p>
+                        <p>Electrical Engineering Student @ Johns Hopkins University</p>
                     </div>
                 </div>
                 <nav class="nav-buttons">
@@ -1476,6 +1539,12 @@
         </div>
     </div>
 
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="image-lightbox" onclick="closeLightbox()">
+        <span class="image-lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" src="" alt="">
+    </div>
+
     <script>
         // Smooth scroll animations
         const observerOptions = {
@@ -1594,6 +1663,40 @@
             document.body.style.overflow = 'auto';
         }
 
+        // Image Lightbox Functions
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            
+            lightboxImage.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Add click handlers to all project images
+        function initImageLightbox() {
+            // Select all images in project sections that should be expandable
+            const images = document.querySelectorAll('.project-image-main img, .project-image img, .wide-image-section img');
+            
+            images.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openLightbox(this.src);
+                });
+            });
+        }
+
+        // Initialize image lightbox after page loads
+        window.addEventListener('load', function() {
+            initImageLightbox();
+        });
+
         // Close modal when clicking outside the PDF container
         document.getElementById('pdfModal').addEventListener('click', function(e) {
             if (e.target === this) {
@@ -1605,6 +1708,7 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closePDF();
+                closeLightbox();
             }
         });
 
